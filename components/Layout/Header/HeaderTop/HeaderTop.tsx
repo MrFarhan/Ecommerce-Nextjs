@@ -6,13 +6,13 @@ const HeaderTop = () => {
   return (
     <div className={styles.headerTop}>
       <div className={styles.headerTopMain}>
-        <div>
+        <div className={styles.headerTopIconGroup}>
           <span>
-            <IoCallOutline /> +88012 3456 7894
+            <IoCallOutline /> &nbsp; +88012 3456 7894
           </span>{" "}
           &nbsp;
           <span>
-            <BsEnvelope /> support@ui-lib.com
+            <BsEnvelope /> &nbsp; support@ui-lib.com
           </span>
         </div>
         <div>

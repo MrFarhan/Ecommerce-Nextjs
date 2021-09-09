@@ -1,0 +1,21 @@
+.inputDropdownMain {
+  .searchIcon {
+    padding: 1em;
+    width: 10px;
+    .inputSearchIcon {
+      color: gray;
+    }
+  }
+  .inputMain{
+    border: none;
+    height: 37px;
+    width: 82%;
+    border-radius: 53px;
+    outline: none;
+  }
+  .dropdown {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -37px;
+  }
+}

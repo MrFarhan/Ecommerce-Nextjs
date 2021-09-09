@@ -1,12 +1,10 @@
 import React from 'react'
-import styles from "./Dropdown.module.scss"
-import { BiChevronDown } from "react-icons/bi";
+import styles from "./BottomDropdown.module.scss"
 
 
-
-const Dropdown = () => {
+const BottomDropdown = () => {
     return (
-        <div className={styles.dropdownMain}>Dropdown here <BiChevronDown/>
+        <div className={styles.bottomDropdownMain}>Bottom Dropdown here
             {/* <div>Item 1</div>    
             <div>Item 1</div>    
             <div>Item 1</div>    
@@ -16,4 +14,4 @@ const Dropdown = () => {
     )
 }
 
-export default Dropdown
+export default BottomDropdown

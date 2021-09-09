@@ -13,4 +13,12 @@
         width: 80%;
         justify-content: space-between;
     }
+    .headerTopIconGroup{
+        display: flex;
+        span{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    }
 }

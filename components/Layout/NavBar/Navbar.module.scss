@@ -1,0 +1,33 @@
+.navbarMain{
+  ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5em;
+  }
+  li{
+    display: none;
+  }
+  ul li {
+    list-style-type: none;
+    text-decoration: none;
+  }
+  .navHome, .navPages, .navUserAccount{
+    width: 7em;
+    height: 1.5em;
+  }
+}
+.navHome:hover li{
+  display: flex;
+}
+.navHome:hover ul,.navPages:hover ul,.navUserAccount:hover ul{
+  display: flex;
+  background-color: red;
+  flex-direction: column;
+}
+.navPages:hover li{
+  display: flex;
+}
+.navUserAccount:hover li{
+  display: flex;
+}
