@@ -1,3 +1,53 @@
-.bottomDropdownMain{
+.BottomDropdownMain {
+  background-color: rgb(246, 249, 252);
+  color: rgb(75, 86, 107);
+  border-radius: 0px 50px 50px 0;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  nav {
+    display: flex;
+    z-index: 1;
+    width: 100%;
+    .categoryNav {
+      justify-content: space-around;
+      display: flex;
+      width: 100%;
+    }
+    .categoryNavHovered {
+      justify-content: space-around;
+      display: flex;
+      width: 100%;
+    }
+  }
+  ul {
+    display: none;
+  }
+  .categoryNavHovered + ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 3.5em;
+    position: absolute;
+    list-style-type: none;
+    flex-direction: column;
+    background: wheat;
+    width: 100%;
+    box-shadow: 0px 0px 5px #ddd7d7;
+  }
 
+  .categoryNavHovered + ul,
+  li {
+    padding: 10px;
+    background: #fff;
+  }
+  .categoryNavHovered + li {
+    background: red;
+    color: yellow;
+  }
+}
+.BottomDropdownMain:hover {
+  cursor: pointer;
 }

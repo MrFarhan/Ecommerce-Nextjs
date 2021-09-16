@@ -1,27 +1,24 @@
 import React from "react";
 import styles from "./Dropdown.module.scss";
-import { BiChevronDown } from "react-icons/bi";
 
 const Dropdown = () => {
   const [showMenu, setShowMenu] = React.useState(false);
+  const [item, setItem] = React.useState("");
   console.log("show menu", showMenu);
   return (
     <div className={styles.dropdownMain} onClick={() => setShowMenu(!showMenu)}>
       <nav>
-        <span
-          className={showMenu ? styles.categoryNavHovered : styles.categoryNav}
-        >
-          All Categories
-          <BiChevronDown />
-          <ul>
-            <li>All Categories</li>
-            <li>Car</li>
-            <li>Electronics</li>
-            <li>Laptop</li>
-            <li>Desktop</li>
-            <li>Camera</li>
-            <li>Toys</li>
-          </ul>
+        <span className={styles.categoryNav}>
+          <select onChange={(e) => setItem(e.target.value)}>
+            <option value="">All Categories</option>
+            <option value="">Car</option>
+            <option value="">Electronics</option>
+            <option value="">Laptop</option>
+            <option value="">Desktop</option>
+            <option value="">Camera</option>
+            <option value="">Toys</option>
+            <option value="">Year</option>
+          </select>
         </span>
       </nav>
     </div>
