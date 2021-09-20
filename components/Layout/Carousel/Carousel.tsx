@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,FC } from "react";
 import styles from "./carousel.module.scss";
 
-export const CarouselItem = ({ children, width }) => {
+type Props = {
+  children:any;
+  width?:string;
+}
+
+export const CarouselItem:FC<Props> = ({ children, width }) => {
   return (
     <div className={styles.carouselItem} style={{ width: width }}>
       {children}
@@ -29,11 +34,12 @@ const Carousel = ({ children }) => {
         {React.Children.map(children, (child, index) => {
           return React.cloneElement(child, { width: "100%" });
         })}
+        
       </div>
       <div className={styles.Indicators}>
         {React.Children.map(children, (child, index) => {
           return (
-            <input type="radio" key={index} onClick={() => updateIndex(index)}></input>
+            <input type="radio" key={index} checked={activeIndex == index} onClick={() => updateIndex(index)}></input>
           );
         })}
       </div>

@@ -1,0 +1,15 @@
+.carouselItemMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button{
+      background: rgb(210, 63, 87);
+      border: none;
+      padding: 1em;
+      border-radius: 1em;
+      color: white;
+      box-shadow: none;
+      font-weight: bolder;
+      width: 115px;
+    }
+  }

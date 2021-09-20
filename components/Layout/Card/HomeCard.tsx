@@ -1,0 +1,34 @@
+import Card from "./Card";
+import { HomeCardData } from "./HomeCard.helper";
+import styles from "./HomeCard.module.scss";
+import { CgBolt } from "react-icons/cg";
+import { AiOutlineCaretRight } from "react-icons/ai";
+
+
+const HomeCard = () => {
+  return (
+    <div className={styles.homeCardMain}>
+      <div className={styles.homeCardMainHeading}>
+        <h2>
+          <CgBolt color="rgb(210, 63, 87)" /> Flash Sale
+        </h2>
+        <p>View all <AiOutlineCaretRight/></p>
+      </div>
+      <div className={styles.homeCard}>
+        {HomeCardData?.map((item, index) => {
+          return (
+            <Card
+              image={item.image}
+              paragraph={item?.paragraph}
+              oldPrice={item?.oldPrice}
+              newPrice={item?.newPrice}
+              itemRating={item?.itemRating}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default HomeCard;

@@ -1,0 +1,20 @@
+.cardMain {
+  height: 480px;
+  min-width: 301px;
+  background: #fff;
+  margin-right: 1%;
+  .cardMainBadge {
+    display: flex;
+    justify-content: space-between;
+  }
+  .projectImage {
+    margin-top: -3em !important;
+  }
+  .priceGroup{
+    color: rgb(210, 63, 87);
+    s{
+      color: gray;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.homeCardMain{
+  .homeCardMainHeading{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    p{
+      color: rgb(125, 135, 156)
+    }
+
+  }
+  .homeCard{
+    display: flex;
+    width: 80vw;
+    flex-wrap: wrap;
+  
+  }
+}
