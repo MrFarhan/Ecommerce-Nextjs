@@ -5,4 +5,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .carouselItemMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button{
+      background: red;
+      padding: 1em;
+      border-radius: 1em;
+      color: white;
+      box-shadow: none;
+      font-weight: bolder;
+    }
+  }
 }

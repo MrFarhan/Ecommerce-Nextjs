@@ -1,0 +1,26 @@
+.carousel {
+overflow: hidden;
+width: 90vw;
+  }
+
+  .carouselInner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+  }
+
+  .carouselItem{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+     background-color: #fff;
+    color: black;
+  }
+
+  .Indicators{
+    display: flex;
+    justify-content: center;
+  }
+
+  .Indicators > button {
+    margin: 5px;
+  }
