@@ -1,18 +1,61 @@
 .cardMain {
-  height: 480px;
-  min-width: 301px;
+  height: 400px;
+  min-width: 300px;
   background: #fff;
   margin-right: 1%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  .cardFooter {
+    padding: 1em;
+    .priceGroup {
+      display: flex;
+      justify-content: space-between;
+      .AddSubButtonGroup {
+        display: flex;
+        flex-direction: column;
+      }
+      .decrementGroup {
+        margin-top: -3em;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
+      button {
+        background: transparent;
+        border: 1px solid rgb(210, 63, 87);
+        font-size: 22px;
+        border-radius: 5px;
+        color: rgb(210, 63, 87);
+        cursor: pointer;
+      }
+    }
+  }
   .cardMainBadge {
     display: flex;
     justify-content: space-between;
+    padding: 1em;
   }
-  .projectImage {
-    margin-top: -3em !important;
+  .cardMainImage {
+    margin-top: -2em !important;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    Image {
+      display: flex;
+      justify-content: center;
+    }
   }
-  .priceGroup{
+  .priceGroup {
     color: rgb(210, 63, 87);
-    s{
+    s {
       color: gray;
       font-weight: 400;
     }

@@ -5,7 +5,6 @@ import { BsFillGridFill } from "react-icons/bs";
 
 const BottomDropdown = () => {
   const [showMenu, setShowMenu] = React.useState(false);
-  console.log("show menu", showMenu);
   return (
     <div
       className={styles.BottomDropdownMain}

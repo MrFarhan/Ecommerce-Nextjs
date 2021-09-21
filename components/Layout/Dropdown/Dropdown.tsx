@@ -4,7 +4,6 @@ import styles from "./Dropdown.module.scss";
 const Dropdown = () => {
   const [showMenu, setShowMenu] = React.useState(false);
   const [item, setItem] = React.useState("");
-  console.log("show menu", showMenu);
   return (
     <div className={styles.dropdownMain} onClick={() => setShowMenu(!showMenu)}>
       <nav>

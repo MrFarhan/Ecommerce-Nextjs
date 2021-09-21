@@ -1,29 +1,44 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Badge from "../Badge/Badge";
 import EyeHeartGroup from "../EyeHeartGroup/EyeHeartGroup";
 import styles from "./Card.module.scss";
 import StarRating from "../StarRating/StarRating";
 
 const Card = ({ image, paragraph, oldPrice, newPrice, itemRating }) => {
-  console.log("mobPic", image);
+  const [counter, setCounter] = useState(0);
   return (
     <div className={styles.cardMain}>
       <div className={styles.cardMainBadge}>
         <Badge content="25% off" />
         <EyeHeartGroup />
       </div>
-      <Image
-        src={image}
-        className={styles.projectImage}
-        height="300"
-        width="300"
-      />
-      <p>{paragraph}</p>
-      <StarRating itemRating={itemRating} />
-      <p className={styles.priceGroup}>
-        {oldPrice} <s>{newPrice}</s>{" "}
-      </p>
+      <div className={styles.cardMainImage}>
+        <Image
+          src={image}
+          className={styles.projectImage}
+          height="200"
+          width="200"
+        />
+      </div>
+      <div className={styles.cardFooter}>
+        <p>{paragraph}</p>
+        <StarRating itemRating={itemRating} />
+        <p className={styles.priceGroup}>
+          <span>
+            {oldPrice} <s>{newPrice}</s>
+          </span>
+          <span className={styles.AddSubButtonGroup}>
+            {counter > 0 && (
+              <span className={styles.decrementGroup}>
+                <button onClick={() => setCounter(counter - 1)}>&#8211;</button>
+                {counter}
+              </span>
+            )}
+            <button onClick={() => setCounter(counter + 1)}>+</button>
+          </span>
+        </p>
+      </div>
     </div>
   );
 };

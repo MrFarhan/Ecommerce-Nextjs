@@ -10,7 +10,7 @@ const HomeCard = () => {
     <div className={styles.homeCardMain}>
       <div className={styles.homeCardMainHeading}>
         <h2>
-          <CgBolt color="rgb(210, 63, 87)" /> Flash Sale
+          <CgBolt color="rgb(210, 63, 87)" /> &nbsp; Flash Sale
         </h2>
         <p>View all <AiOutlineCaretRight/></p>
       </div>
