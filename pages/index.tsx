@@ -9,6 +9,7 @@ import NewArrivals from "../components/NewArrivals/NewArrivals";
 import BigDiscounts from "../components/BigDiscounts/BigDiscounts";
 import CarSection from "../components/CarSection/CarSection";
 import MobileSection from "../components/MobileSection/MobileSection";
+import TwoColumnBannerImageSection from "../components/TwoColumnBannerImageSection/TwoColumnBannerImageSection";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
           <BigDiscounts/>
           <CarSection/>
           <MobileSection/>
+          <TwoColumnBannerImageSection/>
           HEllo world
         </main>
       </Layout>
