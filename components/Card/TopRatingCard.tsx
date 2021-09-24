@@ -8,11 +8,18 @@ type Props = {
   paragraph: string;
   price?: string;
   itemRating?: number;
+  strikePrice?:string;
 };
 
-const TopRatingCard: FC<Props> = ({ image, paragraph, itemRating, price }) => {
+const TopRatingCard: FC<Props> = ({
+  image,
+  paragraph,
+  itemRating,
+  price,
+  strikePrice,
+}) => {
   return (
-    <div>
+    <div style={{ background: "white", borderRadius: "20px", padding: "1em" }}>
       <div>
         <Image src={image} />
       </div>
@@ -20,7 +27,14 @@ const TopRatingCard: FC<Props> = ({ image, paragraph, itemRating, price }) => {
         <p>{paragraph}</p>
         {itemRating && <StarRating itemRating={itemRating} />}
         <p>
-          <span style={{color:"#D23F57"}}>{price}</span>
+          <span style={{ color: "#D23F57" }}>
+            {price}{" "}
+            {strikePrice && (
+              <span style={{ color: "gray" }}>
+                <s>{strikePrice}</s>
+              </span>
+            )}
+          </span>
         </p>
       </div>
     </div>

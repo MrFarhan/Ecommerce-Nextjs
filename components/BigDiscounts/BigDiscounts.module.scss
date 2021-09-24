@@ -1,0 +1,18 @@
+.BigDiscountsMain {
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 2%;
+  .BigDiscountsHeading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .BigDiscountsCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-gap: 25px;
+    gap: 25px;
+    border-radius: 20px;
+    padding: 1em;
+  }
+}

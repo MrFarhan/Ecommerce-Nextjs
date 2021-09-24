@@ -6,6 +6,7 @@ import HomeCard from "../components/Card/HomeCard";
 import TopCategories from "../components/TopCategories/TopCategories";
 import TopRatingFeatured from "../components/TopRatingFeatured/TopRatingFeatured";
 import NewArrivals from "../components/NewArrivals/NewArrivals";
+import BigDiscounts from "../components/BigDiscounts/BigDiscounts";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
           <TopCategories/>
           <TopRatingFeatured/>
           <NewArrivals/>
+          <BigDiscounts/>
           HEllo world
         </main>
       </Layout>
