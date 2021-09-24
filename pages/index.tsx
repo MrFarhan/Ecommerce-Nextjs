@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.scss";
 import HomeCarousel from "../components/Carousel/HomeCarousel";
 import HomeCard from "../components/Card/HomeCard";
 import TopCategories from "../components/TopCategories/TopCategories";
+import TopRatingFeatured from "../components/TopRatingFeatured/TopRatingFeatured";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           <br />
 
           <TopCategories/>
+          <TopRatingFeatured/>
           HEllo world
         </main>
       </Layout>

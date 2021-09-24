@@ -23,6 +23,7 @@ const HomeCard = () => {
               oldPrice={item?.oldPrice}
               newPrice={item?.newPrice}
               itemRating={item?.itemRating}
+              badges
             />
           );
         })}

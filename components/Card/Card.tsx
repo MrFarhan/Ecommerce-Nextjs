@@ -1,18 +1,36 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import Badge from "../Badge/Badge";
 import EyeHeartGroup from "../EyeHeartGroup/EyeHeartGroup";
 import styles from "./Card.module.scss";
 import StarRating from "../StarRating/StarRating";
 
-const Card = ({ image, paragraph, oldPrice, newPrice, itemRating }) => {
+type Props = {
+  badges?: boolean;
+  image: any;
+  paragraph: string;
+  oldPrice?: string;
+  newPrice?: string;
+  itemRating: number;
+};
+
+const Card: FC<Props> = ({
+  badges,
+  image,
+  paragraph,
+  oldPrice,
+  newPrice,
+  itemRating,
+}) => {
   const [counter, setCounter] = useState(0);
   return (
     <div className={styles.cardMain}>
-      <div className={styles.cardMainBadge}>
-        <Badge content="25% off" />
-        <EyeHeartGroup />
-      </div>
+      {badges && (
+        <div className={styles.cardMainBadge}>
+          <Badge content="25% off" />
+          <EyeHeartGroup />
+        </div>
+      )}
       <div className={styles.cardMainImage}>
         <Image
           src={image}
