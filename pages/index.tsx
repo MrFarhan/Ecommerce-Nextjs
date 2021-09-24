@@ -8,6 +8,7 @@ import TopRatingFeatured from "../components/TopRatingFeatured/TopRatingFeatured
 import NewArrivals from "../components/NewArrivals/NewArrivals";
 import BigDiscounts from "../components/BigDiscounts/BigDiscounts";
 import CarSection from "../components/CarSection/CarSection";
+import MobileSection from "../components/MobileSection/MobileSection";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
           <NewArrivals/>
           <BigDiscounts/>
           <CarSection/>
+          <MobileSection/>
           HEllo world
         </main>
       </Layout>

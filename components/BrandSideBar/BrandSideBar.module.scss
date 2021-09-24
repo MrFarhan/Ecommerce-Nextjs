@@ -1,0 +1,38 @@
+.carSideSection {
+  display: flex;
+  .carCompaniesMain {
+    background: #fff;
+    height: auto;
+    width: 235px;
+    border-radius: 10px;
+    margin-right: 37px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    min-height: 560px;
+    max-height: 560px;
+    display: flex;
+    .carCompaniesHeading{
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      h3{
+        cursor: pointer;
+      }
+    }
+    .carCompaniesMap {
+      background: #f7f9fc;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .carCompaniesMap:last-child {
+    display: flex;
+    justify-content: center;
+    margin-top: 25%;
+  }
+}
