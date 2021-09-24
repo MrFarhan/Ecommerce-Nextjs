@@ -1,14 +1,12 @@
 .categoryCardMain {
   padding: 1em;
   .CategoryCardImage {
-    height: 150px;
     background: transparent;
     border: 15px solid white;
     border-radius: 20px;
     background: rgba(0, 0, 0, 0.3);
     .categoryMainImage:hover {
       position: relative;
-      height: 118px;
       opacity: 0.5;
       cursor: pointer;
     }

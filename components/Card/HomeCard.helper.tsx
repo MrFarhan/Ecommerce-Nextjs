@@ -1,6 +1,6 @@
-import shoeImg from "../../../static/images/nike-black.png";
-import mobPic from "../../../static/images/mobile.png";
-import watch from "../../../static/images/watch.png";
+import shoeImg from "../../static/images/nike-black.png";
+import mobPic from "../../static/images/mobile.png";
+import watch from "../../static/images/watch.png";
 
 export const HomeCardData = [
   {

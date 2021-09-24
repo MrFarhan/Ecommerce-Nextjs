@@ -21,7 +21,7 @@ const CategoryCard = ({ image, blueBadgeContent }) => {
           />
         </div>
         <div className={styles.categoryMainImage}>
-          <Image src={image} height="120" width="341" />
+          <Image src={image}/>
         </div>
       </div>
     </div>

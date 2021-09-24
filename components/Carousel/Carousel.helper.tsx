@@ -1,4 +1,4 @@
-import shoeImg from "../../../static/images/nike-black.png"
+import shoeImg from "../../static/images/nike-black.png"
 export const carouselItem = [
   {
     heading: "50% Off For Your First Shopping",

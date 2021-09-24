@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Layout from "../components/Layout/Layout";
 import styles from "../styles/Home.module.scss";
-import HomeCarousel from "../components/Layout/Carousel/HomeCarousel";
-import HomeCard from "../components/Layout/Card/HomeCard";
-import TopCategories from "../components/Layout/TopCategories/TopCategories";
+import HomeCarousel from "../components/Carousel/HomeCarousel";
+import HomeCard from "../components/Card/HomeCard";
+import TopCategories from "../components/TopCategories/TopCategories";
 
 export default function Home() {
   return (

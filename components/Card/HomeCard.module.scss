@@ -1,8 +1,11 @@
 .homeCardMain {
+  max-width: 1200px;
+    width: 100%;
   .homeCardMainHeading {
     display: flex;
     justify-content: space-between;
-    width: 80vw;
+    width: 100%;
+    max-width: 1200px;
     h2 {
       display: flex;
       justify-content: center;
@@ -13,8 +16,9 @@
     }
   }
   .homeCard {
-    display: flex;
-    width: 80vw;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 25px;
+    gap: 25px;
   }
 }
