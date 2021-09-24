@@ -13,14 +13,14 @@ type Props = {
 const TopRatingCard: FC<Props> = ({ image, paragraph, itemRating, price }) => {
   return (
     <div>
-      <div >
+      <div>
         <Image src={image} />
       </div>
       <div>
         <p>{paragraph}</p>
-        <StarRating itemRating={itemRating} />
+        {itemRating && <StarRating itemRating={itemRating} />}
         <p>
-          <span>{price}</span>
+          <span style={{color:"#D23F57"}}>{price}</span>
         </p>
       </div>
     </div>

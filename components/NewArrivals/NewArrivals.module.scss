@@ -1,0 +1,19 @@
+.NewArrivalsMain {
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 2%;
+  .NewArrivalsHeading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .NewArrivalsCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-gap: 25px;
+    gap: 25px;
+    background: white;
+    border-radius: 20px;
+    padding: 1em;
+  }
+}

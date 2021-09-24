@@ -5,6 +5,7 @@ import HomeCarousel from "../components/Carousel/HomeCarousel";
 import HomeCard from "../components/Card/HomeCard";
 import TopCategories from "../components/TopCategories/TopCategories";
 import TopRatingFeatured from "../components/TopRatingFeatured/TopRatingFeatured";
+import NewArrivals from "../components/NewArrivals/NewArrivals";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
 
           <TopCategories/>
           <TopRatingFeatured/>
+          <NewArrivals/>
           HEllo world
         </main>
       </Layout>
