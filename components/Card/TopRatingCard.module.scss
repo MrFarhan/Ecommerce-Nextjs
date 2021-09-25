@@ -1,5 +1,13 @@
-.cardMain{
-  .cardMainImage{
-    
+.TopRatingCardMain {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .paragraphColor{
+    color: gray;
   }
 }

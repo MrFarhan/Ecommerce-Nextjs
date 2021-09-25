@@ -13,6 +13,7 @@ import MobileSection from "../components/MobileSection/MobileSection";
 import Optics from "../components/Optics/Optics";
 import TwoColumnBannerImageSection from "../components/TwoColumnBannerImageSection/TwoColumnBannerImageSection";
 import Categories from "../components/Categories/Categories";
+import AboutBanner from "../components/AboutBanner/AboutBanner";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
           <Optics/>
           <Categories/>
           <MoreProducts/>
+          <AboutBanner/>
 
           HEllo world
         </main>

@@ -1,0 +1,16 @@
+.BigDiscountsMain {
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 2%;
+  .BigDiscountsCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    grid-gap: 25px;
+    gap: 25px;
+    border-radius: 20px;
+    padding: 1em;
+  }
+  .aboutBannerCard{
+    padding:3em;
+  }
+}

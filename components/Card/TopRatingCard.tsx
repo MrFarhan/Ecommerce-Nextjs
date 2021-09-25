@@ -2,13 +2,17 @@ import Image from "next/image";
 import React, { FC } from "react";
 import styles from "./TopRatingCard.module.scss";
 import StarRating from "../StarRating/StarRating";
+import cx from "classnames";
 
 type Props = {
-  image: any;
+  image?: any;
   paragraph: string;
   price?: string;
   itemRating?: number;
-  strikePrice?:string;
+  strikePrice?: string;
+  icon?: any;
+  description?: string;
+  propClass?: string;
 };
 
 const TopRatingCard: FC<Props> = ({
@@ -17,20 +21,27 @@ const TopRatingCard: FC<Props> = ({
   itemRating,
   price,
   strikePrice,
+  icon,
+  description,
+  propClass,
 }) => {
   return (
-    <div style={{ background: "white", borderRadius: "20px", padding: "1em" }}>
-      <div>
-        <Image src={image} />
-      </div>
+    <div className={cx(styles.TopRatingCardMain, propClass)}>
+      {image && (
+        <div>
+          <Image src={image} />
+        </div>
+      )}
+      {icon && icon}
       <div>
         <p>{paragraph}</p>
+        {description && <p className={styles.paragraphColor}> {description}</p>}
         {itemRating && <StarRating itemRating={itemRating} />}
         <p>
           <span style={{ color: "#D23F57" }}>
             {price}{" "}
             {strikePrice && (
-              <span style={{ color: "gray" }}>
+              <span className={styles.paragraphColor}>
                 <s>{strikePrice}</s>
               </span>
             )}
