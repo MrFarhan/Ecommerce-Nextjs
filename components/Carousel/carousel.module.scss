@@ -1,26 +1,27 @@
 .carousel {
-overflow: hidden;
-width: 100vw;
-  }
+  overflow: hidden;
+  width: 100vw;
+}
 
-  .carouselInner {
-    white-space: nowrap;
-    transition: transform 0.3s;
-  }
+.carouselInner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
 
-  .carouselItem{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-     background-color: #fff;
-    color: black;
-  }
+.carouselItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: black;
+  min-height: 520px;
+}
 
-  .Indicators{
-    display: flex;
-    justify-content: center;
-  }
+.Indicators {
+  display: flex;
+  justify-content: center;
+}
 
-  .Indicators > button {
-    margin: 5px;
-  }
+.Indicators > button {
+  margin: 5px;
+}

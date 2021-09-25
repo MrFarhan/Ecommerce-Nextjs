@@ -1,16 +1,15 @@
-.MoreProductsMain{
+.MoreProductsMain {
   width: 100%;
   max-width: 1200px;
   padding-top: 4em;
-  .MoreProductsHeading{
+  .MoreProductsHeading {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .MoreProductsCard{
+  .MoreProductsCard {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-    gap: 25px;
-
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 25px;
   }
 }

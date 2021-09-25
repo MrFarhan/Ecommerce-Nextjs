@@ -4,13 +4,14 @@ import styles from "./HomeCarousel.module.scss"
 import Image from "next/image";
 const HomeCarousel = () => {
   return (
-    <Carousel>
+    <div>
       {carouselItem?.map((item, index) => {
         return (
-          <CarouselItem>
+          <div>
+            <div className={styles.carouselWrapper}>
             <div className={styles.carouselItemMain}>
-              <div>
-                <h2>{item?.heading}</h2>
+              <div className={styles.carouselItemright}>
+                <h1>{item?.heading}</h1>
                 <p>{item?.paragraph}</p>
                 <button>
                   {" "}
@@ -28,10 +29,11 @@ const HomeCarousel = () => {
                 />
               </div>
             </div>
-          </CarouselItem>
+          </div>
+          </div>
         );
       })}
-    </Carousel>
+    </div>
   );
 };
 

@@ -1,8 +1,26 @@
-.carouselItemMain{
+.carouselWrapper {
+  width: 100vw;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+
+  .carouselItemMain {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    button{
+    justify-content: space-around;
+    height: 520px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 1200px;
+
+    .carouselItemright {
+      width: 40%;
+      h1 {
+        font-size: 50px;
+        color: #2b3445;
+      }
+    }
+    button {
       background: rgb(210, 63, 87);
       border: none;
       padding: 1em;
@@ -13,3 +31,4 @@
       width: 115px;
     }
   }
+}

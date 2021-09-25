@@ -7,17 +7,23 @@ const HeaderTop = () => {
     <div className={styles.headerTop}>
       <div className={styles.headerTopMain}>
         <div className={styles.headerTopIconGroup}>
-          <span>
-            <IoCallOutline /> &nbsp; +88012 3456 7894
-          </span>{" "}
-          &nbsp;
-          <span>
-            <BsEnvelope /> &nbsp; support@ui-lib.com
-          </span>
+          <div className={styles.leftGroupItem}>
+            <span>
+              <IoCallOutline size="20px" />
+            </span>{" "}
+            <p>+88012 3456 7894</p>
+          </div>
+          <div className={styles.leftGroupItem2}>
+            <span>
+              <BsEnvelope size="20px" />
+            </span>
+            <p>support@ui-lib.com</p>
+          </div>
         </div>
-        <div>
-          <span>EN</span>&nbsp;
-          <span>USD</span>
+
+        <div className={styles.headerTopIconGroupRight}>
+          <span>EN</span>
+          <p>USD</p>
         </div>
       </div>
     </div>

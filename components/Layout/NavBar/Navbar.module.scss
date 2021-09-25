@@ -1,33 +1,81 @@
-.navbarMain{
-  ul{
+@import "../../../styles/variables";
+
+.navbarMain {
+  ul {
     display: flex;
     margin: 0;
     padding: 0;
     margin-top: 0.5em;
   }
-  li{
+  li {
     display: none;
   }
   ul li {
     list-style-type: none;
     text-decoration: none;
   }
-  .navHome, .navPages, .navUserAccount{
-    width: 7em;
-    height: 1.5em;
+  .navHome,
+  .navPages,
+  .navUserAccount,
+  .navVendor {
+    height: 2.5em;
+    cursor: pointer;
+    z-index: 9;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #2B3445;
+    margin-right: 45px;
+    max-width: 8em;
+  }
+  .navVendor{
+    margin-right: 0px;
+  }
+  .navHome:hover,
+  .navPages:hover,
+  .navUserAccount:hover,
+  .navVendor:hover {
+    margin-right: 45px;
+    height: 2.5em;
+    cursor: pointer;
+    z-index: 9;
+    font-size: 14px;
+    margin-top: 10px;
+    color: $lightRed;
+  }
+  .navVendor:hover{
+    margin-right: 0px;
+  }
+  li:hover{
+    color: $lightRed
   }
 }
-.navHome:hover li{
+.navHome:hover li,
+.navPages:hover li,
+.navUserAccount:hover li,
+.navVendor:hover li {
   display: flex;
+  padding: 1em;
 }
-.navHome:hover ul,.navPages:hover ul,.navUserAccount:hover ul{
+.navHome:hover ul,
+.navPages:hover ul,
+.navUserAccount:hover ul,
+.navVendor:hover ul {
   display: flex;
-  background-color: red;
+  background-color: #ffff;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
   flex-direction: column;
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: rgb(3 0 71 / 9%) 0px 8px 45px;
+  color: rgb(43, 52, 69);
+  min-width: 230px;
+  margin-top: 18px;
+  position: absolute;
 }
-.navPages:hover li{
+.navPages:hover li {
   display: flex;
 }
-.navUserAccount:hover li{
+.navUserAccount:hover li {
   display: flex;
 }

@@ -38,7 +38,7 @@ const TopRatingCard: FC<Props> = ({
         {description && <p className={styles.paragraphColor}> {description}</p>}
         {itemRating && <StarRating itemRating={itemRating} />}
         <p>
-          <span style={{ color: "#D23F57" }}>
+          <span className="lightRedColor">
             {price}{" "}
             {strikePrice && (
               <span className={styles.paragraphColor}>

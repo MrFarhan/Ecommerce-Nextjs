@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./Navbar.module.scss";
+import {
+  navItemHome,
+  navItemPages,
+  navItemUserAccount,
+  navItemVender,
+} from "./Navbar.helper";
 
 const Navbar = () => {
-  const NavData = [
-    { name: "Home", route: "/" },
-    { name: "Pages", route: "/" },
-    { name: "User Account", route: "/" },
-    { name: "Vender Account", route: "/" },
-  ];
   return (
     <div className={styles.navbarMain}>
       <nav>
@@ -15,41 +15,33 @@ const Navbar = () => {
           <span className={styles.navHome}>
             Home
             <ul>
-              <li>hello1</li>
-              <li>hello2</li>
-              <li>hello3</li>
-              <li>hello4</li>
-              <li>hello5</li>
+              {navItemHome?.map((item, index) => {
+                return <li>{item?.heading}</li>;
+              })}
             </ul>
           </span>
-          <span className={styles.navPages}> 
+          <span className={styles.navPages}>
             Pages{" "}
             <ul>
-              <li>hello1</li>
-              <li>hello2</li>
-              <li>hello3</li>
-              <li>hello4</li>
-              <li>hello5</li>
+              {navItemPages?.map((item, index) => {
+                return <li>{item?.heading}</li>;
+              })}
             </ul>
           </span>
-          <span className={styles.navUserAccount}> 
+          <span className={styles.navUserAccount}>
             User Account{" "}
             <ul>
-              <li>hello1</li>
-              <li>hello2</li>
-              <li>hello3</li>
-              <li>hello4</li>
-              <li>hello5</li>
+              {navItemUserAccount?.map((item, index) => {
+                return <li>{item?.heading}</li>;
+              })}
             </ul>
           </span>
-          <span>
+          <span className={styles.navVendor}>
             Vendor{" "}
             <ul>
-              <li>hello1</li>
-              <li>hello2</li>
-              <li>hello3</li>
-              <li>hello4</li>
-              <li>hello5</li>
+              {navItemVender?.map((item, index) => {
+                return <li>{item?.heading}</li>;
+              })}
             </ul>
           </span>
         </ul>

@@ -1,6 +1,5 @@
 import { MoreProductsData } from "./MoreProducts.helper";
 import styles from "./MoreProducts.module.scss";
-import { CgBolt } from "react-icons/cg";
 import { AiOutlineCaretRight } from "react-icons/ai";
 import Card from "../Card/Card";
 

@@ -10,7 +10,7 @@ const BigDiscounts = () => {
     <div className={styles.BigDiscountsMain}>
       <div className={styles.BigDiscountsHeading}>
         <h2>
-          <CgGift color="#D23F57" /> &nbsp;Big Discounts
+          <CgGift className="lightRedColor" /> &nbsp;Big Discounts
         </h2>
         <p>
           View all <AiOutlineCaretRight />
