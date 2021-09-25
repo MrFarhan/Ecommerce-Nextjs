@@ -1,0 +1,33 @@
+.carSectionMain {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 5em;
+  .carMain {
+    max-width: 1200px;
+    width: 100%;
+    .carMainHeading {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        color: rgb(125, 135, 156);
+      }
+    }
+    .carInner {
+      .carCard {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-gap: 25px;
+        gap: 25px;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -22,7 +22,7 @@ const BrandSideBar: FC<Props> = ({ carCompanies, headings }) => {
             <div className={styles.carCompaniesMap}>
               {item?.image && (
                 <div style={{ padding: "10px" }}>
-                  <Image src={item?.image} />
+                  <Image src={item?.image} height="20" width="20" />
                 </div>
               )}
               <p>{item?.paragraph}</p>
