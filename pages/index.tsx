@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import styles from "../styles/Home.module.scss";
 import HomeCarousel from "../components/Carousel/HomeCarousel";
 import HomeCard from "../components/Card/HomeCard";
+import MoreProducts from "../components/MoreProducts/MoreProducts";
 import TopCategories from "../components/TopCategories/TopCategories";
 import TopRatingFeatured from "../components/TopRatingFeatured/TopRatingFeatured";
 import NewArrivals from "../components/NewArrivals/NewArrivals";
@@ -38,6 +39,7 @@ export default function Home() {
           <TwoColumnBannerImageSection/>
           <Optics/>
           <Categories/>
+          <MoreProducts/>
 
           HEllo world
         </main>

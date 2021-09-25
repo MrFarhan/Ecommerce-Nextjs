@@ -1,0 +1,16 @@
+.MoreProductsMain{
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 4em;
+  .MoreProductsHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .MoreProductsCard{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 25px;
+
+  }
+}
