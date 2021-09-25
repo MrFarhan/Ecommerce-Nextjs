@@ -11,6 +11,7 @@ import CarSection from "../components/CarSection/CarSection";
 import MobileSection from "../components/MobileSection/MobileSection";
 import Optics from "../components/Optics/Optics";
 import TwoColumnBannerImageSection from "../components/TwoColumnBannerImageSection/TwoColumnBannerImageSection";
+import Categories from "../components/Categories/Categories";
 
 export default function Home() {
   return (
@@ -36,6 +37,8 @@ export default function Home() {
           <MobileSection/>
           <TwoColumnBannerImageSection/>
           <Optics/>
+          <Categories/>
+
           HEllo world
         </main>
       </Layout>

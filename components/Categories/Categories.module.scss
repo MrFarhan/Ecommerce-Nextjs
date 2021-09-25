@@ -1,0 +1,22 @@
+.categoriesMainContainer {
+  width: 100%;
+  max-width: 1200px;
+  .categoriesMain {
+    .categoriesHeading {
+      display: flex;
+      justify-content: space-between;
+    }
+    .categoriesCard {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 25px;
+      .categoriesCardMap {
+        background: white;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding: 1em;
+      }
+    }
+  }
+}
