@@ -42,8 +42,6 @@ export default function Home() {
           <Categories/>
           <MoreProducts/>
           <AboutBanner/>
-
-          HEllo world
         </main>
       </Layout>
     </div>
