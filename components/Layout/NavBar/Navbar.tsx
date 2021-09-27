@@ -16,7 +16,7 @@ const Navbar = () => {
             Home
             <ul>
               {navItemHome?.map((item, index) => {
-                return <li>{item?.heading}</li>;
+                return <li key={index}>{item?.heading}</li>;
               })}
             </ul>
           </span>
@@ -24,7 +24,7 @@ const Navbar = () => {
             Pages{" "}
             <ul>
               {navItemPages?.map((item, index) => {
-                return <li>{item?.heading}</li>;
+                return <li key={index}>{item?.heading}</li>;
               })}
             </ul>
           </span>
@@ -32,7 +32,7 @@ const Navbar = () => {
             User Account{" "}
             <ul>
               {navItemUserAccount?.map((item, index) => {
-                return <li>{item?.heading}</li>;
+                return <li key={index}>{item?.heading}</li>;
               })}
             </ul>
           </span>
@@ -40,7 +40,7 @@ const Navbar = () => {
             Vendor{" "}
             <ul>
               {navItemVender?.map((item, index) => {
-                return <li>{item?.heading}</li>;
+                return <li key={index}>{item?.heading}</li>;
               })}
             </ul>
           </span>

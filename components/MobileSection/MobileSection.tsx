@@ -27,6 +27,7 @@ const MobileSection = () => {
                   newPrice={item?.price}
                   itemRating={item?.itemRating}
                   badges
+                  key={index}
                 />
               );
             })}

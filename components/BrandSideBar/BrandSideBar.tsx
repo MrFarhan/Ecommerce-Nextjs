@@ -19,10 +19,10 @@ const BrandSideBar: FC<Props> = ({ carCompanies, headings }) => {
         )}
         {carCompanies?.map((item, index) => {
           return (
-            <div className={styles.carCompaniesMap}>
+            <div className={styles.carCompaniesMap} key={index}>
               {item?.image && (
                 <div style={{ padding: "10px" }}>
-                  <Image src={item?.image} height="20" width="20" />
+                  <Image src={item?.image} height="20" width="20" alt="car companies names"/>
                 </div>
               )}
               <p>{item?.paragraph}</p>

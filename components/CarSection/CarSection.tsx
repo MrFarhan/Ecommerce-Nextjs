@@ -27,6 +27,7 @@ const CarSection = () => {
                   newPrice={item?.price}
                   itemRating={item?.itemRating}
                   badges
+                  key={index}
                 />
               );
             })}

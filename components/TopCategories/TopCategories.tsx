@@ -20,6 +20,7 @@ const TopCategories = () => {
             <CategoryCard
               image={item.image}
               blueBadgeContent={item?.blueBadgeContent}
+              key={index}
             />
           );
         })}

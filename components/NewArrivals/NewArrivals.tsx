@@ -23,6 +23,7 @@ const NewArrivals = () => {
               image={item.image}
               paragraph={item?.paragraph}
               price={item?.price}
+              key={index}
             />
           );
         })}

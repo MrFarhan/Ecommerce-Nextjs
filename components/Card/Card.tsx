@@ -12,6 +12,7 @@ type Props = {
   oldPrice?: string;
   newPrice?: string;
   itemRating: number;
+  key: number;
 };
 
 const Card: FC<Props> = ({
@@ -21,10 +22,11 @@ const Card: FC<Props> = ({
   oldPrice,
   newPrice,
   itemRating,
+  key
 }) => {
   const [counter, setCounter] = useState(0);
   return (
-    <div className={styles.cardMain}>
+    <div className={styles.cardMain} key={key}>
       {badges && (
         <div className={styles.cardMainBadge}>
           <Badge content="25% off" />
@@ -37,6 +39,7 @@ const Card: FC<Props> = ({
           className={styles.projectImage}
           height="200"
           width="200"
+          alt="Cards"
         />
       </div>
       <div className={styles.cardFooter}>

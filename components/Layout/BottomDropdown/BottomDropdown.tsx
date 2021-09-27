@@ -24,7 +24,7 @@ const BottomDropdown = () => {
         <ul>
           {bottomDropdownItems?.map((item, index) => {
             return (
-              <li>
+              <li key={index}>
                 <span className={styles.bottomDropdownItemMain}>
                   <span className={styles.bottomDropdownItemImg}>
                     {" "}

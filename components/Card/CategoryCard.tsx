@@ -3,9 +3,9 @@ import React from "react";
 import Badge from "../Badge/Badge";
 import styles from "./CategoryCard.module.scss";
 
-const CategoryCard = ({ image, blueBadgeContent }) => {
+const CategoryCard = ({ image, blueBadgeContent,key }) => {
   return (
-    <div className={styles.categoryCardMain}>
+    <div className={styles.categoryCardMain} key={key}>
       <div className={styles.CategoryCardImage}>
         <div className={styles.categoryBadgeGroup}>
           <Badge
@@ -21,7 +21,7 @@ const CategoryCard = ({ image, blueBadgeContent }) => {
           />
         </div>
         <div className={styles.categoryMainImage}>
-          <Image src={image}/>
+          <Image src={image} alt="categories"/>
         </div>
       </div>
     </div>

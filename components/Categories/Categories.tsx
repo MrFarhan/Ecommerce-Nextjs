@@ -22,8 +22,8 @@ const Categories = () => {
         <div className={styles.categoriesCard}> 
             {CategoriesData?.map((item, index) => {
               return (
-                <div className={styles.categoriesCardMap}>
-                  <Image src={item?.image} height="52" width="52" />
+                <div className={styles.categoriesCardMap} key={index}>
+                  <Image src={item?.image} height="52" width="52" alt="main categories"/>
                   <h5>{item?.paragraph}</h5>
                 </div>
               );

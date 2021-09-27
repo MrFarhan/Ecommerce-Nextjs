@@ -26,6 +26,7 @@ const TopRatingFeatured = () => {
                 paragraph={item?.paragraph}
                 price={item?.price}
                 itemRating={item?.itemRating}
+                key={index}
               />
             );
           })}
@@ -46,6 +47,7 @@ const TopRatingFeatured = () => {
               <TopRatingCard
                 image={item.image}
                 paragraph={item?.paragraph}
+                key={index}
               />
             );
           })}

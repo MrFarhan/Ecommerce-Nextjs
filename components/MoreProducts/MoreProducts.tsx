@@ -22,6 +22,7 @@ const MoreProducts = () => {
               newPrice={item?.newPrice}
               itemRating={item?.itemRating}
               badges
+              key={index}
             />
           );
         })}

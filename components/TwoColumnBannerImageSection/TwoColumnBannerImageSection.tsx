@@ -13,8 +13,8 @@ import WiderBanner from "../../static/images/advertisment/banner-2.png";
 const TwoColumnBannerImageSection = () => {
   return (
     <div className={styles.twoColumnBannerImageMain}>
-      <Image src={banner1} />
-      <Image src={WiderBanner} />
+      <Image src={banner1} alt="Two column banner"/>
+      <Image src={WiderBanner} alt="wide banner"/>
     </div>
   );
 };

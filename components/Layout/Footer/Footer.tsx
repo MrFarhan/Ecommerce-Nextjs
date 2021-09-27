@@ -10,7 +10,7 @@ const Footer = () => {
     <div className={styles.footerMain}>
       <div className={styles.footer}>
         <div>
-          <Image src={logo} />
+          <Image src={logo} alt="logo of website"/>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
             libero id et, in gravida. Sit diam duis mauris nulla cursus. Erat et

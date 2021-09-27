@@ -7,7 +7,7 @@ const HomeCarousel = () => {
     <div>
       {carouselItem?.map((item, index) => {
         return (
-          <div>
+          <div key={index}>
             <div className={styles.carouselWrapper}>
             <div className={styles.carouselItemMain}>
               <div className={styles.carouselItemright}>
@@ -15,7 +15,7 @@ const HomeCarousel = () => {
                 <p>{item?.paragraph}</p>
                 <button>
                   {" "}
-                  <a href={item?.buttonLink} target="_blank">
+                  <a href={item?.buttonLink} target="_blank" rel="noreferrer">
                     Shop Now
                   </a>
                 </button>

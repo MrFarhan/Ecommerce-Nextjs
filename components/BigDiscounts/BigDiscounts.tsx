@@ -24,6 +24,7 @@ const BigDiscounts = () => {
               paragraph={item?.paragraph}
               price={item?.price}
               strikePrice={item?.strikePrice}
+              key={index}
             />
           );
         })}
