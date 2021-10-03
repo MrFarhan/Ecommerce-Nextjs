@@ -1,3 +1,8 @@
+import { BiCart } from "react-icons/bi";
+import { AiOutlineHome } from "react-icons/ai";
+import { MdShoppingCart } from "react-icons/md";
+import { FcManager } from "react-icons/fc";
+
 export const navItemHome = [
   {
     heading: "Super Store",
@@ -56,4 +61,11 @@ export const navItemVender = [
   {
     heading: "Profile",
   },
+];
+
+export const navItemsMobile = [
+  { heading: "Home", icon: <AiOutlineHome size="20px" /> },
+  { heading: "Category", icon: <BiCart size="20px" /> },
+  { heading: "Cart", icon: <MdShoppingCart size="20px" /> },
+  { heading: "Account", icon: <FcManager size="20px" /> },
 ];

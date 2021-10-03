@@ -31,4 +31,15 @@
       padding: 1em;
     }
   }
+  @media screen and (max-width: 1200px) {
+    display: block;
+    .TopRatingMain {
+      width: 100%;
+
+      .topRatingCard {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      }
+    }
+  }
 }

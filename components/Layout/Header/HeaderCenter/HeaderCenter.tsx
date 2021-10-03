@@ -8,7 +8,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 const HeaderBottom = () => {
   return (
     <div className={styles.headerCenter}>
-      <div >
+      <div className={styles.headerCenterLogo} >
         <Image src={logo} alt="Logo of website " />
       </div>
       <div className={styles.inputGroup}>

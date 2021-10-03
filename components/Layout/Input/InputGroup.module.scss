@@ -8,15 +8,18 @@
   }
   .inputMain {
     border: none;
-    height: 45px;
+    height: 42px;
     width: 82%;
     border-radius: 53px;
     outline: none;
     font-size: 14px;
   }
+  ::placeholder {
+    opacity: 0.5;
+  }
   .dropdown {
     display: flex;
     justify-content: flex-end;
-    margin-top: -45px;
+    margin-top: -42px;
   }
 }

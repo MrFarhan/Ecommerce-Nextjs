@@ -7,7 +7,7 @@ const InputGroup = () => {
   return (
     <div className={styles.inputDropdownMain}>
       <span className={styles.searchIcon}><AiOutlineSearch className={styles.inputSearchIcon} size="15px"/></span>
-      <input type="text" className={styles.inputMain} placeholder="Search for..." />
+      <input type="text" className={styles.inputMain} placeholder="Searching for..." />
      <span className={styles.dropdown}> <Dropdown /></span>
     </div>
   );

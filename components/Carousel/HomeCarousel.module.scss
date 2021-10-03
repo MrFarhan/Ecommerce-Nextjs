@@ -12,9 +12,10 @@
     background-color: #fff;
     width: 100%;
     max-width: 1200px;
+    padding: 4em;
 
     .carouselItemright {
-      width: 40%;
+      width: 50%;
       h1 {
         font-size: 50px;
         color: #2b3445;
@@ -29,6 +30,17 @@
       box-shadow: none;
       font-weight: bolder;
       width: 115px;
+    }
+  }
+  @media screen and (max-width: 599px){
+    .carouselItemMain{
+      flex-direction: column;
+      .carouselItemright{
+        width: 100%;
+        h1{
+          font-size:32px;
+        }
+      }
     }
   }
 }

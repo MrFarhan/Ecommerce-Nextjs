@@ -1,0 +1,29 @@
+@import "../../../../styles/variables";
+
+.navMobileMain {
+  display: none;
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      width: 90vw;
+      li {
+        .navItems {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+    width: 100vw;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+  }
+}

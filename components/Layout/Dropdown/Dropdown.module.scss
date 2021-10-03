@@ -4,8 +4,8 @@
   width: 145px;
   border-left: 1px solid lightgray;
   border-radius: 0px 50px 50px 0;
-  height: 45px;
-    justify-content: center;
+  height: 41px;
+  justify-content: center;
   align-items: center;
   display: flex;
   nav {
@@ -38,7 +38,10 @@
       height: 100%;
       outline: none;
       cursor: pointer;
-      option{
+      color: #4b566b;
+      font-size: 14px;
+
+      option {
         padding: 1em;
       }
     }

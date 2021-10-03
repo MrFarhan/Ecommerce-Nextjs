@@ -1,8 +1,3 @@
-// import apple from "../../static/images/OpticsCompanies/apple.png";
-// import occular from "../../static/images/OpticsCompanies/occular.png";
-// import rayBan from "../../static/images/OpticsCompanies/ray-ban.png";
-// import titan from "../../static/images/OpticsCompanies/titan.png";
-// import zeiss from "../../static/images/OpticsCompanies/zeiss.png";
 import { GiLoincloth } from "react-icons/gi";
 import { AiOutlineLaptop } from "react-icons/ai";
 import { RiMotorbikeFill } from "react-icons/ri";
