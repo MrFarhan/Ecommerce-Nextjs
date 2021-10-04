@@ -3,9 +3,10 @@ import styles from "./NavbarMobile.module.scss";
 import { navItemsMobile } from ".././Navbar.helper";
 import Badge from "../../../Badge/Badge";
 import { useSelector } from "react-redux";
+import { initialStateType } from "../../../../redux/reducers";
 
 const NavbarMobile = () => {
-  const state = useSelector((state) => state);
+  const state = useSelector<initialStateType,initialStateType>((state) => state);
   const reduxCounter = state?.counter;
   return (
     <div className={styles.navMobileMain}>
