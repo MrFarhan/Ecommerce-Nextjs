@@ -2,7 +2,7 @@ import React,{FC} from "react";
 import styles from "./Badge.module.scss";
 
 type Props = {
-  content: string;
+  content: string | number;
   bgColor?: string;
   width?:string;
   height?:string;

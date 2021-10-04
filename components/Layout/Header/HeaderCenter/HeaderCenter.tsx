@@ -5,8 +5,12 @@ import InputGroup from "../../Input/InputGroup";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineShopping } from "react-icons/ai";
 import Badge from "../../../Badge/Badge";
+import { useSelector } from "react-redux";
+import { initialStateType } from "../../../../redux/reducers";
 
 const HeaderBottom = () => {
+  const state = useSelector<initialStateType,initialStateType>((state) => state);
+  const reduxCounter = state?.counter;
   return (
     <div className={styles.headerCenter}>
       <div className={styles.headerCenterLogo} >
@@ -21,7 +25,7 @@ const HeaderBottom = () => {
         </div>
         <div className={styles.rightIconItem}>
           <AiOutlineShopping className={styles.dpShopingIcons} />
-          <span className={styles.badgeCount}><Badge content="3" width="20px" height="20px"/></span>
+          <span className={styles.badgeCount}><Badge content={reduxCounter} width="20px" height="20px"/></span>
         </div>
       </div>
     </div>

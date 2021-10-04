@@ -4,6 +4,9 @@ import Badge from "../Badge/Badge";
 import EyeHeartGroup from "../EyeHeartGroup/EyeHeartGroup";
 import styles from "./Card.module.scss";
 import StarRating from "../StarRating/StarRating";
+import { counterAction } from "../../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { initialStateType } from "../../redux/reducers";
 
 type Props = {
   badges?: boolean;
@@ -22,9 +25,26 @@ const Card: FC<Props> = ({
   oldPrice,
   newPrice,
   itemRating,
-  key
+  key,
 }) => {
   const [counter, setCounter] = useState(0);
+  const state = useSelector<initialStateType, initialStateType>(
+    (state) => state
+  );
+  const reduxCounter = state?.counter;
+
+  const dispatch = useDispatch();
+  const IncreamentFunc = () => {
+    setCounter(counter + 1);
+    dispatch(counterAction(reduxCounter + 1));
+    console.log("state useEffect ", reduxCounter);
+  };
+  const DecreamentFunc = () => {
+    setCounter(counter - 1);
+    dispatch(counterAction(reduxCounter - 1));
+    console.log("state useEffect ", reduxCounter);
+  };
+
   return (
     <div className={styles.cardMain} key={key}>
       {badges && (
@@ -52,11 +72,11 @@ const Card: FC<Props> = ({
           <span className={styles.AddSubButtonGroup}>
             {counter > 0 && (
               <span className={styles.decrementGroup}>
-                <button onClick={() => setCounter(counter - 1)}>&#8211;</button>
+                <button onClick={() => DecreamentFunc()}>&#8211;</button>
                 {counter}
               </span>
             )}
-            <button onClick={() => setCounter(counter + 1)}>+</button>
+            <button onClick={() => IncreamentFunc()}>+</button>
           </span>
         </p>
       </div>
