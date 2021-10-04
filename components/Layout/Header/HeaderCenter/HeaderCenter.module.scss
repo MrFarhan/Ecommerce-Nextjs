@@ -13,11 +13,11 @@
   font-size: 12px;
   padding-left: 1.5em;
 
-  .headerCenterLogo{
+  .headerCenterLogo {
     margin-right: 10px;
   }
   .inputGroup {
-    width: 610px;
+    width: 700px;
     background: white;
     height: 44px;
     border: 1px solid #bab1a5;
@@ -41,6 +41,12 @@
       align-items: center;
       justify-content: center;
       margin-right: 10px;
+      position: relative;
+      .badgeCount {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+      }
     }
     .dpShopingIcons {
       font-size: 25px;
@@ -49,13 +55,12 @@
   }
 
   @media screen and (max-width: 900px) {
-    justify-content:center;
-      .headerCenterLogo{
-        display: none;
-    }
-    .rightIconGroup{
+    justify-content: center;
+    .headerCenterLogo {
       display: none;
-
+    }
+    .rightIconGroup {
+      display: none;
     }
   }
 }

@@ -5,12 +5,14 @@ type Props = {
   content: string;
   bgColor?: string;
   width?:string;
+  height?:string;
   color?:string;
+
 }
 
-const Badge:FC<Props> = ({content,bgColor,width,color}) => {
+const Badge:FC<Props> = ({content,bgColor,width,height,color}) => {
   return (
-    <div className={styles.badgeMain} style={{background:bgColor, width:width,color:color}}>
+    <div className={styles.badgeMain} style={{background:bgColor, width:width,color:color, height:height}}>
       {content}
     </div>
   );

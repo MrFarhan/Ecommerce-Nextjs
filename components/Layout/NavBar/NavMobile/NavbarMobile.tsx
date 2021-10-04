@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./NavbarMobile.module.scss";
 import { navItemsMobile } from ".././Navbar.helper";
+import Badge from "../../../Badge/Badge";
 
 const NavbarMobile = () => {
   return (
@@ -13,6 +14,11 @@ const NavbarMobile = () => {
                 <div className={styles.navItems}>
                   {item.heading}
                   {item?.icon}
+                  {item?.heading === "Cart" && (
+                    <span className={styles.badgeCount}>
+                      <Badge content="3" width="20px" height="20px" />
+                    </span>
+                  )}
                 </div>
               </li>
             );

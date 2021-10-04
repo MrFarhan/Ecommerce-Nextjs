@@ -4,6 +4,7 @@ import logo from "../../../../static/images/logo.svg";
 import InputGroup from "../../Input/InputGroup";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineShopping } from "react-icons/ai";
+import Badge from "../../../Badge/Badge";
 
 const HeaderBottom = () => {
   return (
@@ -20,6 +21,7 @@ const HeaderBottom = () => {
         </div>
         <div className={styles.rightIconItem}>
           <AiOutlineShopping className={styles.dpShopingIcons} />
+          <span className={styles.badgeCount}><Badge content="3" width="20px" height="20px"/></span>
         </div>
       </div>
     </div>

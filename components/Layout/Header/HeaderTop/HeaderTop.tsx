@@ -1,7 +1,7 @@
 import styles from "./HeaderTop.module.scss";
 import { IoCallOutline } from "react-icons/io5";
 import { BsEnvelope } from "react-icons/bs";
-import Image from "next/image"
+import Image from "next/image";
 import logo from "../../../../static/images/logo.svg";
 
 const HeaderTop = () => {
@@ -23,12 +23,21 @@ const HeaderTop = () => {
           </div>
         </div>
         <div className={styles.headerLogo}>
-          <Image src={logo} alt="website logo"/>
+          <Image src={logo} alt="website logo" />
         </div>
 
         <div className={styles.headerTopIconGroupRight}>
-          <span>EN</span>
-          <p>USD</p>
+          <select>
+            <option>EN</option>
+            <option>BN</option>
+            <option>HN</option>
+          </select>
+          <select>
+            <option>USD</option>
+            <option>EUR</option>
+            <option>BDT</option>
+            <option>INR</option>
+          </select>
         </div>
       </div>
     </div>

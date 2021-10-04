@@ -12,7 +12,7 @@
   .headerTopMain {
     display: flex;
     width: 1200px;
-    padding:1em;
+    padding: 1em;
     justify-content: space-between;
     max-width: 1200px;
     .headerTopIconGroup {
@@ -39,11 +39,22 @@
     .headerTopIconGroupRight {
       display: flex;
       align-items: center;
+      select {
+        background: transparent;
+        color: white;
+        outline: none;
+        border: none;
+        margin-right: 1em;
+        cursor: pointer;
+        option{
+          color: black;
+        }
+      }
       p {
         margin-left: 12px;
       }
     }
-    .headerLogo{
+    .headerLogo {
       display: none;
     }
   }
@@ -53,7 +64,7 @@
       .headerTopIconGroup {
         display: none;
       }
-      .headerLogo{
+      .headerLogo {
         display: flex;
       }
     }
