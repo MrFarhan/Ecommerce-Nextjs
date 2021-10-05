@@ -21,7 +21,7 @@ const CategoryCard = ({ image, blueBadgeContent,key }) => {
           />
         </div>
         <div className={styles.categoryMainImage}>
-          <Image src={image} alt="categories"/>
+          <Image src={image} alt="categories" />
         </div>
       </div>
     </div>

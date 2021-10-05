@@ -14,7 +14,7 @@ const TopRatingFeatured = () => {
           <h2>
             <GiStarGate color="rgb(250, 180, 0)" /> &nbsp;Top Ratings
           </h2>
-          <p>
+          <p className="viewAllClass">
             View all <AiOutlineCaretRight />
           </p>
         </div>
@@ -27,6 +27,8 @@ const TopRatingFeatured = () => {
                 price={item?.price}
                 itemRating={item?.itemRating}
                 key={index}
+                propClass={styles.topRatingCardReturn}
+
               />
             );
           })}
@@ -37,7 +39,7 @@ const TopRatingFeatured = () => {
           <h2>
             <GiJusticeStar color="rgb(250, 180, 0)" /> &nbsp;Featured Boards
           </h2>
-          <p>
+          <p className="viewAllClass"> 
             View all <AiOutlineCaretRight />
           </p>
         </div>
@@ -48,6 +50,7 @@ const TopRatingFeatured = () => {
                 image={item.image}
                 paragraph={item?.paragraph}
                 key={index}
+                propClass={styles.topRatingFeaturedCard}
               />
             );
           })}

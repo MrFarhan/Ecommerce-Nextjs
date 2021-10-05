@@ -12,7 +12,7 @@ const TopCategories = () => {
         <h2>
           <BsGridFill color="rgb(210, 63, 87)"/> &nbsp; Top Categories
         </h2>
-        <p>View all <AiOutlineCaretRight/></p>
+        <p className="viewAllClass">View all <AiOutlineCaretRight/></p>
       </div>
       <div className={styles.homeCard}>
         {TopCategoryData?.map((item, index) => {

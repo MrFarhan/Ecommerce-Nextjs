@@ -12,7 +12,7 @@ const BigDiscounts = () => {
         <h2>
           <CgGift className="lightRedColor" /> &nbsp;Big Discounts
         </h2>
-        <p>
+        <p className="viewAllClass">
           View all <AiOutlineCaretRight />
         </p>
       </div>
@@ -25,6 +25,7 @@ const BigDiscounts = () => {
               price={item?.price}
               strikePrice={item?.strikePrice}
               key={index}
+              propClass={styles.BigDiscountCardReturn}
             />
           );
         })}

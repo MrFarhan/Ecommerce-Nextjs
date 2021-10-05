@@ -18,6 +18,7 @@
       background: white;
       border-radius: 20px;
       padding: 1em;
+      height: 228px;
     }
   }
   .FeaturedMain {
@@ -29,16 +30,33 @@
       background: white;
       border-radius: 20px;
       padding: 1em;
+      max-height: 228px;
+      // .topRatingFeaturedCard {
+      //   height: 281px;
+      //   img {
+      //     width: 62em !important;
+      //     border-radius: 8px;
+      //     height: 12em !important;
+      //     max-width: 16em !important;
+      //   }
+      // }
     }
   }
   @media screen and (max-width: 1200px) {
     display: block;
     .TopRatingMain {
       width: 100%;
-
       .topRatingCard {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+        height: auto;
+      }
+    }
+    .FeaturedMain {
+      width: 100%;
+
+      .FeaturedCard {
+        max-height: 100%;
       }
     }
   }

@@ -12,7 +12,7 @@ const HomeCard = () => {
         <h2>
           <CgBolt color="rgb(210, 63, 87)" /> &nbsp; Flash Sale
         </h2>
-        <p>View all <AiOutlineCaretRight/></p>
+        <p className="viewAllClass">View all <AiOutlineCaretRight/></p>
       </div>
       <div className={styles.homeCard}>
         {HomeCardData?.map((item, index) => {

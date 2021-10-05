@@ -9,25 +9,25 @@ import londonBritch from "../../static/images/featured/london-britches.png";
 export const TopRating = [
   {
     image: camera,
-    paragraph: "Smart Watch Black",
+    paragraph: "Camera",
     price: "250.00",
     itemRating: 3,
   },
   {
-    image: mobile,
-    paragraph: "Smart Watch Blue",
-    price: "250.00",
-    itemRating: 5,
-  },
-  {
     image: shoe,
-    paragraph: "Smart Watch Green",
+    paragraph: "Shoe",
     price: "250.00",
     itemRating: 2,
   },
   {
+    image: mobile,
+    paragraph: "Phone",
+    price: "250.00",
+    itemRating: 5,
+  },
+  {
     image: watch,
-    paragraph: "Smart Watch Red",
+    paragraph: "Watch",
     price: "250.00",
     itemRating: 1,
   }

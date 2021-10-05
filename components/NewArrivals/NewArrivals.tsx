@@ -12,7 +12,7 @@ const NewArrivals = () => {
         <h2>
           <TiStarburst color="rgb(250, 180, 0)" /> &nbsp;New Arrivals
         </h2>
-        <p>
+        <p className="viewAllClass">
           View all <AiOutlineCaretRight />
         </p>
       </div>

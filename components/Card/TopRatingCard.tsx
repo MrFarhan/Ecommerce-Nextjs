@@ -35,10 +35,10 @@ const TopRatingCard: FC<Props> = ({
         </div>
       )}
       {icon && icon}
-      <div>
+      <div className={styles.TopRatingTextGroup}>
+        {itemRating && <StarRating itemRating={itemRating} />}
         <p>{paragraph}</p>
         {description && <p className={styles.paragraphColor}> {description}</p>}
-        {itemRating && <StarRating itemRating={itemRating} />}
         <p>
           <span className="lightRedColor">
             {price}{" "}

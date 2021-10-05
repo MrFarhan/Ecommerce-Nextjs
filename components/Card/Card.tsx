@@ -50,7 +50,9 @@ const Card: FC<Props> = ({
       {badges && (
         <div className={styles.cardMainBadge}>
           <Badge content="25% off" />
-          <EyeHeartGroup />
+          <span className={styles.cardMainBadgeSpan}>
+            <EyeHeartGroup />
+          </span>
         </div>
       )}
       <div className={styles.cardMainImage}>

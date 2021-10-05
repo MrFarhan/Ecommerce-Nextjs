@@ -1,13 +1,23 @@
 .TopRatingCardMain {
   background: #fff;
   border-radius: 20px;
-  padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  .paragraphColor{
-    color: gray;
+  .TopRatingTextGroup {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 0;
+      margin-top: 6px;
+    }
+    .paragraphColor {
+      color: gray;
+    }
   }
 }

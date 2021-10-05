@@ -41,10 +41,16 @@
     display: flex;
     justify-content: space-between;
     padding: 1em;
+    z-index: 1;
+    min-height: 82px;
+    .cardMainBadgeSpan {
+      display: none;
+    }
   }
+
   .cardMainImage {
-    margin-top: -2em;
-    height: 200px;
+    margin-top: -3em;
+    height: 235px;
     display: flex;
     justify-content: center;
     Image {
@@ -59,4 +65,8 @@
       font-weight: 400;
     }
   }
+}
+
+.cardMain:hover > .cardMainBadge > .cardMainBadgeSpan {
+  display: flex;
 }
