@@ -7,6 +7,8 @@ import StarRating from "../StarRating/StarRating";
 import { counterAction } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { initialStateType } from "../../redux/reducers";
+import IncreamentBtn from "../ButtonGroup/IncreamentBtn";
+import DecreamentBtn from "../ButtonGroup/DecrementBtn";
 
 type Props = {
   badges?: boolean;
@@ -71,14 +73,19 @@ const Card: FC<Props> = ({
           <span>
             {oldPrice} <s>{newPrice}</s>
           </span>
+
           <span className={styles.AddSubButtonGroup}>
             {counter > 0 && (
               <span className={styles.decrementGroup}>
-                <button onClick={() => DecreamentFunc()}>&#8211;</button>
+                <span onClick={() => DecreamentFunc()}>
+                  <DecreamentBtn />
+                </span>
                 {counter}
               </span>
             )}
-            <button onClick={() => IncreamentFunc()}>+</button>
+            <span onClick={() => IncreamentFunc()}>
+              <IncreamentBtn />
+            </span>
           </span>
         </p>
       </div>

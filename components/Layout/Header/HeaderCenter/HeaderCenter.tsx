@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import styles from "./HeaderCenter.module.scss";
 import Image from "next/image";
 import logo from "../../../../static/images/logo.svg";
@@ -7,13 +8,21 @@ import { AiOutlineShopping } from "react-icons/ai";
 import Badge from "../../../Badge/Badge";
 import { useSelector } from "react-redux";
 import { initialStateType } from "../../../../redux/reducers";
+import Cart from "../../../SideCart.tsx/Cart";
 
 const HeaderBottom = () => {
-  const state = useSelector<initialStateType,initialStateType>((state) => state);
+  const state = useSelector<initialStateType, initialStateType>(
+    (state) => state
+  );
   const reduxCounter = state?.counter;
+  const [showCart, setShowCart] = useState(false);
+
+  const propSetShowCart = () => {
+    return setShowCart((prev) => !prev);
+  };
   return (
     <div className={styles.headerCenter}>
-      <div className={styles.headerCenterLogo} >
+      <div className={styles.headerCenterLogo}>
         <Image src={logo} alt="Logo of website " />
       </div>
       <div className={styles.inputGroup}>
@@ -24,8 +33,14 @@ const HeaderBottom = () => {
           <CgProfile className={styles.dpShopingIcons} />
         </div>
         <div className={styles.rightIconItem}>
-          <AiOutlineShopping className={styles.dpShopingIcons} />
-          <span className={styles.badgeCount}><Badge content={reduxCounter} width="20px" height="20px"/></span>
+          <AiOutlineShopping
+            className={styles.dpShopingIcons}
+            onClick={() => propSetShowCart()}
+          />
+          <span className={styles.badgeCount}>
+            <Badge content={reduxCounter} width="20px" height="20px" />
+          </span>
+          {showCart && <Cart propSetShowCart={propSetShowCart} />}
         </div>
       </div>
     </div>
