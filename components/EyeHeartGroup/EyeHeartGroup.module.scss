@@ -1,7 +1,38 @@
-.eyeHeartGroupMain{
-display: flex;
-flex-direction: column;
-z-index: 2;
-
-
+.eyeHeartGroupMain {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  align-items: center;
+  cursor: pointer;
 }
+
+.icon {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon:hover + .heart {
+  width: 25px;
+  height: 25px;
+  background: #e7e7e7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon:hover + .eye {
+  width: 25px;
+  height: 25px;
+  background: #e7e7e7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// .icon:hover {
+//   width: 21px;
+//   height: 21px;
+// }
