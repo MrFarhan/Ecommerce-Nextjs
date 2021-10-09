@@ -7,11 +7,25 @@ export const carouselItem = [
     buttonLink: "/shop",
     image:{shoeImg}
   },
-  // {
-  //   heading: "80% Off For Your Second Shopping",
-  //   paragraph:
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convalliss.",
-  //   buttonLink: "/shop",
-  //   image:{shoeImg}
-  // },
+  {
+    heading: "80% Off For Your Second Shopping",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convalliss.",
+    buttonLink: "/shop",
+    image:{shoeImg}
+  },
+  {
+    heading: "10% Off For Your Second Shopping",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convalliss.",
+    buttonLink: "/shop",
+    image:{shoeImg}
+  },
+  {
+    heading: "20% Off For Your Second Shopping",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convalliss.",
+    buttonLink: "/shop",
+    image:{shoeImg}
+  },
 ];

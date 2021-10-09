@@ -1,34 +1,68 @@
-.carouselWrapper {
-  width: 100vw;
-  background-color: #fff;
+.carouselMain {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-
-  .carouselItemMain {
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100;
+  .carouselDiv {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 520px;
-    background-color: #fff;
-    width: 100%;
-    max-width: 1200px;
-    padding: 4em;
+    width: 100vw;
+    .carouselMap {
+      height: 100%;
+      display: flex;
+      width: 100vw;
+      .carouselWrapper {
+        width: 100vw;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        transition: all 1s ease 0s;
 
-    .carouselItemright {
-      width: 50%;
-      h1 {
-        font-size: 50px;
-        color: #2b3445;
+        .carouselItemMain {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          height: 520px;
+          background-color: #fff;
+          width: 100%;
+          max-width: 1200px;
+          padding: 4em;
+
+          .carouselItemright {
+            width: 50%;
+            h1 {
+              font-size: 50px;
+              color: #2b3445;
+            }
+          }
+        }
       }
     }
   }
-  @media screen and (max-width: 599px){
-    .carouselItemMain{
-      flex-direction: column;
-      .carouselItemright{
-        width: 100%;
-        h1{
-          font-size:32px;
+  .controlBtn {
+    display: flex;
+    span {
+      cursor: pointer;
+      height: 40px;
+      width: 40px;
+      font-size: 32px;
+    }
+  }
+  @media screen and (max-width: 599px) {
+    .carouselDiv {
+      .carouselMap {
+        .carouselWrapper {
+          .carouselItemMain {
+            flex-direction: column;
+            .carouselItemright {
+              width: 100%;
+              h1 {
+                font-size: 32px;
+              }
+            }
+          }
         }
       }
     }
