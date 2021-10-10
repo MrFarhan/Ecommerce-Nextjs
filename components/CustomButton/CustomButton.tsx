@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { FC } from "react";
 import styles from "./CustomButton.module.scss";
 
@@ -7,9 +8,17 @@ interface Props {
   background?: string;
   color?: string;
   width?: string;
+  icon?: any;
 }
 
-const CustomButton: FC<Props> = ({ text, link, background, color, width }) => {
+const CustomButton: FC<Props> = ({
+  text,
+  link,
+  background,
+  color,
+  width,
+  icon,
+}) => {
   return link ? (
     <a href={link}>
       <button
@@ -21,15 +30,20 @@ const CustomButton: FC<Props> = ({ text, link, background, color, width }) => {
         }}
         className={styles.btn}
       >
-        {text}
+        {icon && <Image src={icon} alt="icon"/>} &nbsp;{text}
       </button>
     </a>
   ) : (
     <button
-      style={{ background: background, color: color, cursor: "pointer" }}
+      style={{
+        background: background,
+        color: color,
+        cursor: "pointer",
+        width: width,
+      }}
       className={styles.btn}
     >
-      {text}
+      {icon && <Image src={icon} alt="icon"  />} &nbsp;{text}
     </button>
   );
 };

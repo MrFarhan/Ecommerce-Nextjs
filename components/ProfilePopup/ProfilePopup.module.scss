@@ -1,0 +1,82 @@
+.ProfilePopupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 5em;
+  .heading {
+    color: rgb(43, 52, 69);
+    margin-bottom: 0px;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+      width: 90%;
+      span {
+        padding-bottom: 1em;
+      }
+      input {
+        padding: 1em;
+        border-radius: 7px;
+        border: 1px solid gray;
+        outline: none;
+      }
+      input:focus-visible {
+        border: 1px solid red;
+        outline: none;
+      }
+    }
+    hr {
+      width: 60px;
+    }
+    .lineBreak {
+      display: flex;
+      width: 50%;
+      padding-top: 10px;
+    }
+    .loginSocialBtns {
+      width: 100%;
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+      button {
+        margin-bottom: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .signupText,
+    .forgotPassText {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      a {
+        margin-left: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid rgb(43, 52, 69);
+        font-size: 16px;
+        color: black;
+      }
+    }
+    .forgotPassText {
+      background: rgb(243, 245, 249);
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+}

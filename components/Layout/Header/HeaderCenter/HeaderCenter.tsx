@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import { initialStateType } from "../../../../redux/reducers";
 import Cart from "../../../SideCart.tsx/Cart";
 import Modal from "../../../Modal/Modal";
+import ProfilePopup from "../../../ProfilePopup/ProfilePopup";
 
 const HeaderBottom = () => {
   const state = useSelector<initialStateType, initialStateType>(
@@ -39,7 +40,7 @@ const HeaderBottom = () => {
           {showModal && (
             <Modal
               onClose={() => setShowModal(false)}
-              child={<InputGroup />}
+              child={<ProfilePopup />}
             />
           )}
         </div>

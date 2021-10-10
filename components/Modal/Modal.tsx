@@ -9,8 +9,8 @@ const Modal = ({ onClose, child }) => {
   return (
     <div className={styles.ModalMainContainer}>
       <div className={styles.ModalContainer} ref={ModalRef}>
-        <span>{child}</span>
-        <button className={styles.closeBtn} onClick={onClose}>
+        {child}
+        <button className={styles.closeBtn} onClick={onClose} style={{display:"none"}}>
           X
         </button>
       </div>
