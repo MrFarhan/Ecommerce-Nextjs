@@ -14,6 +14,11 @@ import dell from "../../static/images/mobileCompanies/dell.png";
 import sony from "../../static/images/mobileCompanies/sony.png";
 import xiaomi from "../../static/images/mobileCompanies/xiaomi.png";
 
+import hermanMiller from "../../static/images/mobileShops/herman-miller.png";
+import otobi from "../../static/images/mobileShops/otobi.png";
+import hatil from "../../static/images/mobileShops/hatil.png";
+import steelcase from "../../static/images/mobileShops/steelcase.png";
+
 export const CarSectionData = [
   {
     image: img1,
@@ -63,13 +68,15 @@ export const CarSectionData = [
     price: "$187.50",
     strikePrice: "$50.00",
     itemRating: 1,
-  },  {
+  },
+  {
     image: img8,
     paragraph: "Smart Watch Blue",
     price: "$187.50",
     strikePrice: "$50.00",
     itemRating: 1,
-  },  {
+  },
+  {
     image: img9,
     paragraph: "Smart Watch Blue",
     price: "$187.50",
@@ -78,7 +85,7 @@ export const CarSectionData = [
   },
 ];
 
-export const carCompanies = [
+export const Brand = [
   {
     image: apple,
     paragraph: "Apple",
@@ -105,5 +112,27 @@ export const carCompanies = [
   },
   {
     paragraph: "View all brands",
+  },
+];
+
+export const Shop = [
+  {
+    image: hermanMiller,
+    paragraph: "herman miller",
+  },
+  {
+    image: otobi,
+    paragraph: "otobi",
+  },
+  {
+    image: hatil,
+    paragraph: "hatil",
+  },
+  {
+    image: steelcase,
+    paragraph: "steelcase",
+  },
+  {
+    paragraph: "View all Shops",
   },
 ];

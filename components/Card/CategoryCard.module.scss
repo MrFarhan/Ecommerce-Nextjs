@@ -14,6 +14,7 @@
     .categoryMainImage:hover {
       position: relative;
       opacity: 0.5;
+      transition: 300ms ease;
     }
     .categoryBadgeGroup {
       display: flex;

@@ -77,7 +77,7 @@ export const CarSectionData = [
   },
 ];
 
-export const carCompanies = [
+export const Brand = [
   {
     image: apple,
     paragraph: "Apple",

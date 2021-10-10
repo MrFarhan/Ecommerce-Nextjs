@@ -30,7 +30,7 @@ const TopRatingCard: FC<Props> = ({
   return (
     <div className={cx(styles.TopRatingCardMain, propClass)} key={key}>
       {image && (
-        <div>
+        <div className={styles.TopRatingImg}>
           <Image src={image} alt="top rating cards" />
         </div>
       )}
