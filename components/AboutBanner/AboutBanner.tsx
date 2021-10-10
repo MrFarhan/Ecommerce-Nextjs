@@ -7,15 +7,16 @@ const AboutBanner = () => {
   return (
     <div className={styles.BigDiscountsMain}>
       <div className={styles.BigDiscountsCard}>
-        {AboutBannerData?.map((item,index) => {
+        {AboutBannerData?.map((item, index) => {
           return (
-            <TopRatingCard
-              icon={item?.icon}
-              paragraph={item?.heading}
-              description={item?.description}
-              propClass={styles.aboutBannerCard}
-              key={index}
-            />
+            <span key={index}>
+              <TopRatingCard
+                icon={item?.icon}
+                paragraph={item?.heading}
+                description={item?.description}
+                propClass={styles.aboutBannerCard}
+              />
+            </span>
           );
         })}
       </div>

@@ -9,6 +9,7 @@ import Badge from "../../../Badge/Badge";
 import { useSelector } from "react-redux";
 import { initialStateType } from "../../../../redux/reducers";
 import Cart from "../../../SideCart.tsx/Cart";
+import Modal from "../../../Modal/Modal";
 
 const HeaderBottom = () => {
   const state = useSelector<initialStateType, initialStateType>(
@@ -16,6 +17,7 @@ const HeaderBottom = () => {
   );
   const reduxCounter = state?.counter;
   const [showCart, setShowCart] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const propSetShowCart = () => {
     return setShowCart((prev) => !prev);
@@ -30,7 +32,16 @@ const HeaderBottom = () => {
       </div>
       <div className={styles.rightIconGroup}>
         <div className={styles.rightIconItem}>
-          <CgProfile className={styles.dpShopingIcons} />
+          <CgProfile
+            className={styles.dpShopingIcons}
+            onClick={() => setShowModal(true)}
+          />
+          {showModal && (
+            <Modal
+              onClose={() => setShowModal(false)}
+              child={<InputGroup />}
+            />
+          )}
         </div>
         <div className={styles.rightIconItem}>
           <AiOutlineShopping

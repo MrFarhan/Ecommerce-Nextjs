@@ -13,7 +13,6 @@ type Props = {
   icon?: any;
   description?: string;
   propClass?: string;
-  key?: number;
 };
 
 const TopRatingCard: FC<Props> = ({
@@ -25,10 +24,9 @@ const TopRatingCard: FC<Props> = ({
   icon,
   description,
   propClass,
-  key,
 }) => {
   return (
-    <div className={cx(styles.TopRatingCardMain, propClass)} key={key}>
+    <div className={cx(styles.TopRatingCardMain, propClass)} >
       {image && (
         <div className={styles.TopRatingImg}>
           <Image src={image} alt="top rating cards" />

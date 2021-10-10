@@ -22,15 +22,17 @@ const Optics = () => {
           <div className={styles.carCard}>
             {CarSectionData?.map((item, index) => {
               return (
-                <Card
-                  image={item.image}
-                  paragraph={item?.paragraph}
-                  oldPrice={item?.strikePrice}
-                  newPrice={item?.price}
-                  itemRating={item?.itemRating}
-                  badges
-                  key={index}
-                />
+                <span key={index}>
+                  <Card
+                    image={item.image}
+                    paragraph={item?.paragraph}
+                    oldPrice={item?.strikePrice}
+                    newPrice={item?.price}
+                    itemRating={item?.itemRating}
+                    badges
+                    keyI={index}
+                  />
+                </span>
               );
             })}
           </div>

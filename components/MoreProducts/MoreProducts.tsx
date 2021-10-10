@@ -15,15 +15,17 @@ const MoreProducts = () => {
       <div className={styles.MoreProductsCard}>
         {MoreProductsData?.map((item, index) => {
           return (
-            <Card
-              image={item.image}
-              paragraph={item?.paragraph}
-              oldPrice={item?.oldPrice}
-              newPrice={item?.newPrice}
-              itemRating={item?.itemRating}
-              badges
-              key={index}
-            />
+            <span key={index}>
+              <Card
+                image={item.image}
+                paragraph={item?.paragraph}
+                oldPrice={item?.oldPrice}
+                newPrice={item?.newPrice}
+                itemRating={item?.itemRating}
+                badges
+                keyI={index}
+              />
+            </span>
           );
         })}
       </div>

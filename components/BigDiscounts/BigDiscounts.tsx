@@ -19,14 +19,15 @@ const BigDiscounts = () => {
       <div className={styles.BigDiscountsCard}>
         {BigDiscountsData?.map((item, index) => {
           return (
-            <TopRatingCard
-              image={item.image}
-              paragraph={item?.paragraph}
-              price={item?.price}
-              strikePrice={item?.strikePrice}
-              key={index}
-              propClass={styles.BigDiscountCardReturn}
-            />
+            <span key={index}>
+              <TopRatingCard
+                image={item.image}
+                paragraph={item?.paragraph}
+                price={item?.price}
+                strikePrice={item?.strikePrice}
+                propClass={styles.BigDiscountCardReturn}
+              />
+            </span>
           );
         })}
       </div>

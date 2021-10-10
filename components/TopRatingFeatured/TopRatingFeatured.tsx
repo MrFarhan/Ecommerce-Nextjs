@@ -21,15 +21,15 @@ const TopRatingFeatured = () => {
         <div className={styles.topRatingCard}>
           {TopRating?.map((item, index) => {
             return (
-              <TopRatingCard
-                image={item.image}
-                paragraph={item?.paragraph}
-                price={item?.price}
-                itemRating={item?.itemRating}
-                key={index}
-                propClass={styles.topRatingCardReturn}
-
-              />
+              <span key={index}>
+                <TopRatingCard
+                  image={item.image}
+                  paragraph={item?.paragraph}
+                  price={item?.price}
+                  itemRating={item?.itemRating}
+                  propClass={styles.topRatingCardReturn}
+                />
+              </span>
             );
           })}
         </div>
@@ -39,19 +39,20 @@ const TopRatingFeatured = () => {
           <h2>
             <GiJusticeStar color="rgb(250, 180, 0)" /> &nbsp;Featured Boards
           </h2>
-          <p className="viewAllClass"> 
+          <p className="viewAllClass">
             View all <AiOutlineCaretRight />
           </p>
         </div>
-        <div className={styles.FeaturedCard} >
+        <div className={styles.FeaturedCard}>
           {Featured?.map((item, index) => {
             return (
-              <TopRatingCard
-                image={item.image}
-                paragraph={item?.paragraph}
-                key={index}
-                propClass={styles.topRatingFeaturedCard}
-              />
+              <span key={index}>
+                <TopRatingCard
+                  image={item.image}
+                  paragraph={item?.paragraph}
+                  propClass={styles.topRatingFeaturedCard}
+                />
+              </span>
             );
           })}
         </div>

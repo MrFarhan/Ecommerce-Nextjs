@@ -8,7 +8,7 @@ import BrandSideBar from "../BrandSideBar/BrandSideBar";
 const CarSection = () => {
   return (
     <div className={styles.carSectionMain}>
-      <BrandSideBar carCompanies={carCompanies}/>
+      <BrandSideBar carCompanies={carCompanies} />
       <div className={styles.carMain}>
         <div className={styles.carMainHeading}>
           <h2>Cars</h2>
@@ -20,15 +20,17 @@ const CarSection = () => {
           <div className={styles.carCard}>
             {CarSectionData?.map((item, index) => {
               return (
-                <Card
-                  image={item.image}
-                  paragraph={item?.paragraph}
-                  oldPrice={item?.strikePrice}
-                  newPrice={item?.price}
-                  itemRating={item?.itemRating}
-                  badges
-                  key={index}
-                />
+                <span key={index}>
+                  <Card
+                    image={item.image}
+                    paragraph={item?.paragraph}
+                    oldPrice={item?.strikePrice}
+                    newPrice={item?.price}
+                    itemRating={item?.itemRating}
+                    badges
+                    keyI={index}
+                  />
+                </span>
               );
             })}
           </div>

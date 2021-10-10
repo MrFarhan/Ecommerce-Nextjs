@@ -19,12 +19,13 @@ const NewArrivals = () => {
       <div className={styles.NewArrivalsCard}>
         {NewArrivalsData?.map((item, index) => {
           return (
-            <TopRatingCard
-              image={item.image}
-              paragraph={item?.paragraph}
-              price={item?.price}
-              key={index}
-            />
+            <span key={index}>
+              <TopRatingCard
+                image={item.image}
+                paragraph={item?.paragraph}
+                price={item?.price}
+              />
+            </span>
           );
         })}
       </div>
