@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { initialStateType } from "../../redux/reducers";
 import IncreamentBtn from "../ButtonGroup/IncreamentBtn";
 import DecreamentBtn from "../ButtonGroup/DecrementBtn";
+import Modal from "../Modal/Modal";
+import ProductDetailsPopup from "../ProductDetailsPopup/ProductDetailsPopup";
 
 type Props = {
   badges?: boolean;
@@ -18,44 +20,51 @@ type Props = {
   newPrice?: string;
   itemRating: number;
   keyI?: number;
+  itemRatingCount?: number;
+  brand?: string;
+  soldBy?: string;
+  isStockAvailable?: boolean;
+  imageArray?:string[];
 };
 
-const Card: FC<Props> = ({
-  badges,
-  image,
-  paragraph,
-  oldPrice,
-  newPrice,
-  itemRating,
-  keyI,
-}) => {
+const Card: FC<Props> = (props) => {
+  const { badges, image, paragraph, oldPrice, newPrice, itemRating, keyI } =
+    props;
   const [counter, setCounter] = useState(0);
   const state = useSelector<initialStateType, initialStateType>(
     (state) => state
   );
+  const [showDetails, setShowDetails] = useState(false);
   const reduxCounter = state?.counter;
 
   const dispatch = useDispatch();
   const IncreamentFunc = () => {
     setCounter(counter + 1);
     dispatch(counterAction(reduxCounter + 1));
-    console.log("state useEffect ", reduxCounter);
   };
   const DecreamentFunc = () => {
     setCounter(counter - 1);
     dispatch(counterAction(reduxCounter - 1));
-    console.log("state useEffect ", reduxCounter);
   };
 
   return (
-    <div className={styles.cardMain} >
+    <div className={styles.cardMain}>
       {badges && (
         <div className={styles.cardMainBadge}>
           <Badge content="25% off" />
           <span className={styles.cardMainBadgeSpan}>
-            <EyeHeartGroup />
+            <EyeHeartGroup showModal={() => setShowDetails(true)} />
           </span>
         </div>
+      )}
+      {showDetails && (
+        <Modal
+          onClose={() => setShowDetails(false)}
+          child={<ProductDetailsPopup data={props} />}
+          showCloseBtn
+          height="440px"
+          width="650px"
+        />
       )}
       <div className={styles.cardMainImage}>
         <Image

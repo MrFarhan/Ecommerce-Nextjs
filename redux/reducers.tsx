@@ -11,7 +11,6 @@ export const initialState:initialStateType = {
 export default function Reducer(state:initialStateType = initialState, { type, payload }) {
   switch (type) {
     case COUNTER:
-      console.log("paylaoad is ", payload);
       return {
         ...state,
         counter: payload,

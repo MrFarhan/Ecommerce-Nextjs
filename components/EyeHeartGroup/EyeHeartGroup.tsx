@@ -4,12 +4,12 @@ import { AiFillHeart } from "react-icons/ai";
 import { AiOutlineHeart } from "react-icons/ai";
 import styles from "./EyeHeartGroup.module.scss";
 
-const EyeHeartGroup = () => {
+const EyeHeartGroup = ({ showModal }) => {
   const [heartFill, setHeartFill] = useState(false);
   return (
     <div className={styles.eyeHeartGroupMain}>
       <span className={styles.eye}>
-        <span className={styles.icon}>
+        <span className={styles.icon} onClick={() => showModal()}>
           <IoMdEye size="21px" />{" "}
         </span>
       </span>

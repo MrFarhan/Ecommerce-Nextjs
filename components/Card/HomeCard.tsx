@@ -27,6 +27,11 @@ const HomeCard = () => {
                 itemRating={item?.itemRating}
                 badges
                 keyI={index}
+                itemRatingCount={item?.itemRatingCount}
+                brand={item?.brand}
+                soldBy={item?.soldBy}
+                isStockAvailable={item?.isStockAvailable}
+                imageArray={item?.itemImageArray}
               />
             </span>
           );
