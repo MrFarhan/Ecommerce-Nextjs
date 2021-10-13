@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Optics.module.scss";
 import { AiOutlineCaretRight } from "react-icons/ai";
-import { CarSectionData, Brand } from "./Optics.helper";
+import { opticsData, Brand } from "./Optics.helper";
 import { Shop } from "../MobileSection/MobileSection.helper";
 
 import Card from "../Card/Card";
@@ -20,7 +20,7 @@ const Optics = () => {
         </div>
         <div className={styles.carInner}>
           <div className={styles.carCard}>
-            {CarSectionData?.map((item, index) => {
+            {opticsData?.map((item, index) => {
               return (
                 <span key={index}>
                   <Card
@@ -30,7 +30,7 @@ const Optics = () => {
                     newPrice={item?.price}
                     itemRating={item?.itemRating}
                     badges
-                    keyI={index}
+                    keyI={"optics-"+index}
                   />
                 </span>
               );

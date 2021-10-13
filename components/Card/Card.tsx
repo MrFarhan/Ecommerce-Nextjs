@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, FC } from "react";
 import Badge from "../Badge/Badge";
 import EyeHeartGroup from "../EyeHeartGroup/EyeHeartGroup";
@@ -19,12 +20,12 @@ type Props = {
   oldPrice?: string;
   newPrice?: string;
   itemRating: number;
-  keyI?: number;
+  keyI?: any;
   itemRatingCount?: number;
   brand?: string;
   soldBy?: string;
   isStockAvailable?: boolean;
-  imageArray?:string[];
+  itemImageArray?: string[];
 };
 
 const Card: FC<Props> = (props) => {
@@ -46,7 +47,6 @@ const Card: FC<Props> = (props) => {
     setCounter(counter - 1);
     dispatch(counterAction(reduxCounter - 1));
   };
-
   return (
     <div className={styles.cardMain}>
       {badges && (
@@ -76,7 +76,14 @@ const Card: FC<Props> = (props) => {
         />
       </div>
       <div className={styles.cardFooter}>
-        <p>{paragraph}</p>
+        <Link
+          href={{
+            pathname: `/products/${keyI}`,
+          }}
+          passHref
+        >
+          <p>{paragraph}</p>
+        </Link>
         <StarRating itemRating={itemRating} />
         <p className={styles.priceGroup}>
           <span>

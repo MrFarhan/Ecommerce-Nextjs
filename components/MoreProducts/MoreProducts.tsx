@@ -23,7 +23,7 @@ const MoreProducts = () => {
                 newPrice={item?.newPrice}
                 itemRating={item?.itemRating}
                 badges
-                keyI={index}
+                keyI={"more-"+index}
               />
             </span>
           );

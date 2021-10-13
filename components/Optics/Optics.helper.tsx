@@ -13,7 +13,7 @@ import rayBan from "../../static/images/OpticsCompanies/ray-ban.png";
 import titan from "../../static/images/OpticsCompanies/titan.png";
 import zeiss from "../../static/images/OpticsCompanies/zeiss.png";
 
-export const CarSectionData = [
+export const opticsData = [
   {
     image: img1,
     paragraph: "Smart Watch Black",

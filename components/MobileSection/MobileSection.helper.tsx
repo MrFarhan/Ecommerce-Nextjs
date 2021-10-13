@@ -19,7 +19,7 @@ import otobi from "../../static/images/mobileShops/otobi.png";
 import hatil from "../../static/images/mobileShops/hatil.png";
 import steelcase from "../../static/images/mobileShops/steelcase.png";
 
-export const CarSectionData = [
+export const MobileData = [
   {
     image: img1,
     paragraph: "Smart Watch Black",

@@ -28,7 +28,7 @@ const CarSection = () => {
                     newPrice={item?.price}
                     itemRating={item?.itemRating}
                     badges
-                    keyI={index}
+                    keyI={"car-" + index}
                   />
                 </span>
               );
