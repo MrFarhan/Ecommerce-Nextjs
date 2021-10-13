@@ -1,12 +1,12 @@
-.header{
-    width: 100%;
-    background-color: white;
-    color: black;
-    border-top: 1px solid #eaeaea;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid whitesmoke;
-    box-shadow: 0px 0px 5px #ddd7d7;
+.header {
+  width: 100%;
+  background-color: white;
+  color: black;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 16px rgb(43 52 69 / 10%);
+  position: relative;
 }

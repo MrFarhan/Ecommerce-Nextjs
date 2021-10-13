@@ -1,66 +1,87 @@
-.headerCenter {
+.headerCenterContainer,
+.headerCenterContainerScroll {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  height: 80px;
-  background: white;
-  color: black;
-  margin-top: 50;
-  font-family: Open Sans, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 12px;
-  padding-left: 1.5em;
-
-  .headerCenterLogo {
-    margin-right: 10px;
-  }
-  .inputGroup {
-    width: 700px;
-    background: white;
-    height: 44px;
-    border: 1px solid #bab1a5;
-    border-radius: 77px;
-    margin-right: 10px;
-  }
-  .inputGroup:hover {
-    border: 1px solid black;
-  }
-
-  .rightIconGroup {
+  justify-content: center;
+  background-color: #fff;
+  z-index: 3;
+  top: 0;
+  width: 100vw;
+  .headerCenter {
     display: flex;
-    .rightIconItem {
-      width: 4em;
-      background: gray;
-      border-radius: 100%;
-      color: rgba(0, 0, 0, 0.54);
-      background: #f3f5f9;
-      height: 4em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 80px;
+    background: white;
+    color: black;
+    margin-top: 50;
+    font-family: Open Sans, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,
+      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
+    font-size: 12px;
+    padding-left: 1.5em;
+
+    .headerCenterLogo {
       margin-right: 10px;
-      position: relative;
-      .badgeCount {
-        position: absolute;
-        top: -10px;
-        right: -10px;
+      display: flex;
+      .headerLogo {
+        margin-right: 10px;
       }
     }
-    .dpShopingIcons {
-      font-size: 25px;
-      cursor: pointer;
+    .inputGroup {
+      width: 700px;
+      background: white;
+      height: 44px;
+      border: 1px solid #bab1a5;
+      border-radius: 77px;
+      margin-right: 10px;
     }
-  }
+    .inputGroup:hover {
+      border: 1px solid black;
+    }
 
-  @media screen and (max-width: 900px) {
-    justify-content: center;
-    .headerCenterLogo {
-      display: none;
-    }
     .rightIconGroup {
-      display: none;
+      display: flex;
+      .rightIconItem {
+        width: 4em;
+        background: gray;
+        border-radius: 100%;
+        color: rgba(0, 0, 0, 0.54);
+        background: #f3f5f9;
+        height: 4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        position: relative;
+        .badgeCount {
+          position: absolute;
+          top: -10px;
+          right: -10px;
+        }
+      }
+      .dpShopingIcons {
+        font-size: 25px;
+        cursor: pointer;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      justify-content: center;
+      .headerCenterLogo {
+        display: none;
+      }
+      .rightIconGroup {
+        display: none;
+      }
     }
   }
+}
+
+.headerCenterContainerScroll {
+  position: fixed;
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
 }

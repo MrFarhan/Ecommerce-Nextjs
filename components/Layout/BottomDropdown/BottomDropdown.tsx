@@ -4,7 +4,12 @@ import { AiOutlineRight } from "react-icons/ai";
 import { BsFillGridFill } from "react-icons/bs";
 import { bottomDropdownItems } from "./BottomDropdown.helper";
 
-const BottomDropdown = () => {
+interface Props {
+  text?: string;
+  background?: string;
+}
+
+const BottomDropdown = ({ text, background }: Props) => {
   const [showMenu, setShowMenu] = React.useState(false);
   return (
     <div
@@ -14,10 +19,11 @@ const BottomDropdown = () => {
       <nav>
         <span
           className={showMenu ? styles.categoryNavHovered : styles.categoryNav}
+          style={{ background: background }}
         >
           <span className={styles.categoryNavHeading}>
-            <BsFillGridFill  size="20px"/>
-            <p>All Categories</p>
+            <BsFillGridFill size="20px"/>
+            {text && <p>{text}</p>}
           </span>
           <AiOutlineRight />
         </span>

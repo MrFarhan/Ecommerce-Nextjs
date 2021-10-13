@@ -1,22 +1,30 @@
-.headerBottom  {
+.headerBottomContainer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  .headerBottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    height:60px;
+    height: 60px;
     max-width: 1200px;
     height: 50px;
     background: white;
-    color:BLACK;
+    color: BLACK;
     margin-top: 50;
-    font-family: Open Sans,Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-family: Open Sans, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,
+      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
     font-size: 12px;
-    .bottomDropdown{
-        width:200px;
+    .bottomDropdown {
+      width: 200px;
     }
-    @media screen and(max-width:900px){
-        display: none;
-        
+    @media screen and(max-width:900px) {
+      display: none;
     }
+  }
 }
