@@ -23,7 +23,7 @@ const BigDiscounts = () => {
               <TopRatingCard
                 image={item.image}
                 paragraph={item?.paragraph}
-                price={item?.price}
+                price={item?.newPrice}
                 strikePrice={item?.strikePrice}
                 propClass={styles.BigDiscountCardReturn}
               />

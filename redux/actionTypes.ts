@@ -1,1 +1,1 @@
-export const COUNTER = "COUNTER";
+export const ITEM = "ITEM";

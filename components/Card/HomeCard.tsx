@@ -16,22 +16,23 @@ const HomeCard = () => {
         </p>
       </div>
       <div className={styles.homeCard}>
-        {HomeCardData?.map((item, index) => {
+        {Object.values(HomeCardData)?.map((item, index) => {
           return (
             <span key={index}>
               <Card
-                image={item.image}
-                paragraph={item?.paragraph}
-                oldPrice={item?.oldPrice}
-                newPrice={item?.newPrice}
-                itemRating={item?.itemRating}
+                image={item?.value?.image}
+                paragraph={item?.value?.paragraph}
+                oldPrice={item?.value?.oldPrice}
+                newPrice={item?.value?.newPrice}
+                itemRating={item?.value?.itemRating}
                 badges
-                keyI={"accessories-"+index}
-                itemRatingCount={item?.itemRatingCount}
-                brand={item?.brand}
-                soldBy={item?.soldBy}
-                isStockAvailable={item?.isStockAvailable}
-                itemImageArray={item?.itemImageArray}
+                keyI={"accessories-" + item?.keyI}
+                itemRatingCount={item?.value?.itemRatingCount}
+                brand={item?.value?.brand}
+                soldBy={item?.value?.soldBy}
+                isStockAvailable={item?.value?.isStockAvailable}
+                itemImageArray={item?.value?.itemImageArray}
+                completeItem={item}
               />
             </span>
           );

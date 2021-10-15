@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, FC } from "react";
+import React, { useState, FC, useEffect } from "react";
 import Badge from "../Badge/Badge";
 import EyeHeartGroup from "../EyeHeartGroup/EyeHeartGroup";
 import styles from "./Card.module.scss";
 import StarRating from "../StarRating/StarRating";
-import { counterAction } from "../../redux/actions";
+import { itemAction } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { initialStateType } from "../../redux/reducers";
 import IncreamentBtn from "../ButtonGroup/IncreamentBtn";
@@ -26,6 +26,7 @@ type Props = {
   soldBy?: string;
   isStockAvailable?: boolean;
   itemImageArray?: string[];
+  completeItem?: any;
 };
 
 const Card: FC<Props> = (props) => {
@@ -35,18 +36,55 @@ const Card: FC<Props> = (props) => {
   const state = useSelector<initialStateType, initialStateType>(
     (state) => state
   );
-  const [showDetails, setShowDetails] = useState(false);
-  const reduxCounter = state?.counter;
 
+  const [showDetails, setShowDetails] = useState(false);
+
+  console.log("counter", counter);
   const dispatch = useDispatch();
+
   const IncreamentFunc = () => {
-    setCounter(counter + 1);
-    dispatch(counterAction(reduxCounter + 1));
+    const reduxItems = [...state?.item];
+    const currentItemIndex = reduxItems?.findIndex(
+      (item1) => item1?.keyI === props?.completeItem?.keyI
+    );
+
+    if (currentItemIndex !== -1) {
+      reduxItems[currentItemIndex].quantity = ++reduxItems[currentItemIndex]
+        .quantity;
+    } else {
+      reduxItems.push({ ...props.completeItem, quantity: 1 });
+    }
+    dispatch(itemAction(reduxItems));
   };
+
   const DecreamentFunc = () => {
-    setCounter(counter - 1);
-    dispatch(counterAction(reduxCounter - 1));
+    const reduxItems = [...state?.item];
+    const currentItemIndex = reduxItems?.findIndex(
+      (item1) => item1?.keyI === props?.completeItem?.keyI
+    );
+    if (currentItemIndex !== -1) {
+      console.log("redux length", reduxItems[currentItemIndex].quantity);
+      if (reduxItems[currentItemIndex].quantity === 1) {
+        reduxItems.splice(currentItemIndex, 1);
+      } else {
+        reduxItems[currentItemIndex].quantity = --reduxItems[currentItemIndex]
+          .quantity;
+      }
+    } else {
+      reduxItems.splice(currentItemIndex, 1);
+    }
+    dispatch(itemAction(reduxItems));
   };
+
+  useEffect(() => {
+    setCounter(
+      state?.item?.reduce((prev, curr) => {
+        if (curr?.keyI == props?.completeItem?.keyI) {
+          return (prev += curr.quantity || 0);
+        } else return prev;
+      }, 0)
+    );
+  }, [state?.item, IncreamentFunc, DecreamentFunc]);
   return (
     <div className={styles.cardMain}>
       {badges && (

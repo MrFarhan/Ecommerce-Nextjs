@@ -17,13 +17,15 @@ const MoreProducts = () => {
           return (
             <span key={index}>
               <Card
-                image={item.image}
-                paragraph={item?.paragraph}
-                oldPrice={item?.oldPrice}
-                newPrice={item?.newPrice}
-                itemRating={item?.itemRating}
+                image={item?.value?.image}
+                paragraph={item?.value?.paragraph}
+                oldPrice={item?.value?.oldPrice}
+                newPrice={item?.value?.newPrice}
+                itemRating={item?.value?.itemRating}
                 badges
-                keyI={"more-"+index}
+                keyI={"more-"+item?.keyI}
+                completeItem={item}
+
               />
             </span>
           );

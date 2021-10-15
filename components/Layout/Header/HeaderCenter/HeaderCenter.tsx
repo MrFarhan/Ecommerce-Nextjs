@@ -34,7 +34,7 @@ const HeaderBottom = () => {
   const state = useSelector<initialStateType, initialStateType>(
     (state) => state
   );
-  const reduxCounter = state?.counter;
+  const reduxItems = state?.item;
   const [showCart, setShowCart] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
@@ -54,7 +54,7 @@ const HeaderBottom = () => {
           <span className={styles.headerLogo}>
             <Image src={logo} alt="Logo of website " />
           </span>
-          {scrolled && <BottomDropdown background="white"/>}
+          {scrolled && <BottomDropdown background="white" />}
         </div>
         <div className={styles.inputGroup}>
           <InputGroup />
@@ -78,7 +78,11 @@ const HeaderBottom = () => {
               onClick={() => propSetShowCart()}
             />
             <span className={styles.badgeCount}>
-              <Badge content={reduxCounter} width="20px" height="20px" />
+              <Badge
+                content={reduxItems?.length}
+                width="20px"
+                height="20px"
+              />
             </span>
             {showCart && <Cart propSetShowCart={propSetShowCart} />}
           </div>

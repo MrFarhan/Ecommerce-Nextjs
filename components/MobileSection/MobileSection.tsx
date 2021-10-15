@@ -22,13 +22,14 @@ const MobileSection = () => {
               return (
                 <span key={index}>
                   <Card
-                    image={item.image}
-                    paragraph={item?.paragraph}
-                    oldPrice={item?.strikePrice}
-                    newPrice={item?.price}
-                    itemRating={item?.itemRating}
+                    image={item?.value?.image}
+                    paragraph={item?.value?.paragraph}
+                    oldPrice={item?.value?.strikePrice}
+                    newPrice={item?.value?.newPrice}
+                    itemRating={item?.value?.itemRating}
                     badges
-                    keyI={"mobile-"+index}
+                    keyI={"mobile-" + item?.keyI}
+                    completeItem={item}
                   />
                 </span>
               );

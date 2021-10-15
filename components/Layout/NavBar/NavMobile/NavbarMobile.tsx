@@ -6,8 +6,10 @@ import { useSelector } from "react-redux";
 import { initialStateType } from "../../../../redux/reducers";
 
 const NavbarMobile = () => {
-  const state = useSelector<initialStateType,initialStateType>((state) => state);
-  const reduxCounter = state?.counter;
+  const state = useSelector<initialStateType, initialStateType>(
+    (state) => state
+  );
+  const reduxCounter = state?.item?.length;
   return (
     <div className={styles.navMobileMain}>
       <nav>

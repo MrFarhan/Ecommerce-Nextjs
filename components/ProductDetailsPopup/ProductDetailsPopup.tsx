@@ -5,8 +5,6 @@ import StarRating from "../StarRating/StarRating";
 import styles from "./ProductDetailsPopup.module.scss";
 
 const ProductDetailsPopup = ({ data }) => {
-
-  console.log("dataaaa", data);
   return (
     <div className={styles.ProductDetailsContainer} key={data?.image}>
       <div className={styles.ProductDetailsContentContainer}>
@@ -24,7 +22,8 @@ const ProductDetailsPopup = ({ data }) => {
           <h1 className={styles.ProductHeading}>{data?.paragraph}</h1>
           <p className={styles.ProductBrandName}>Brand: {data?.brand}</p>
           <span className={styles.ProductRating}>
-            <StarRating itemRating={data?.itemRating} />({data?.itemRatingCount})
+            <StarRating itemRating={data?.itemRating} />({data?.itemRatingCount}
+            )
           </span>
           <h2>${data?.newPrice}</h2>
           <p className={styles.ProductStockDetails}>
