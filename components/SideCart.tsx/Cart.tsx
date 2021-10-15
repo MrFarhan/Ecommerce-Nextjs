@@ -5,39 +5,37 @@ import IncreamentBtn from "../ButtonGroup/IncreamentBtn";
 import CustomButton from "../CustomButton/CustomButton";
 import styles from "./Cart.module.scss";
 import Image from "next/image";
-import car1 from "../../static/images/cars/1.png";
-import car2 from "../../static/images/cars/1.png";
-import car3 from "../../static/images/cars/1.png";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { DecreamentFunc } from "../../hooks/DecreamentCartItem";
+import { IncreamentFunc } from "../../hooks/IncreamentCartItem";
+
+import shopingBag from "../../static/images/shoppingBag.svg";
+import { itemAction } from "../../redux/actions";
 
 const Cart = ({ propSetShowCart }) => {
-  const state = useSelector((state):any => state);
+  const state = useSelector((state): any => state);
   const cartItem = state?.item;
-  const tempCartData = [
-    { image: car1, heading: "Ford 2019", quantity: 1, price: 250 },
-    { image: car2, heading: "Ford 2019", quantity: 2, price: 250 },
-    { image: car3, heading: "Ford 2019", quantity: 5, price: 250 },
-  ];
+  const reduxItems = [...state?.item];
+  const dispatch = useDispatch();
+  var totalPrice = 0;
 
+  const totalAmount = () => {
+    cartItem?.map((item, index) => {
+      console.log("hel", Number(item?.value?.newPrice));
+      totalPrice += Number(item?.value?.newPrice * item?.quantity);
+    });
+  };
+  totalAmount();
+  console.log("total Price", totalPrice);
   console.log("cartItem", cartItem);
 
-  // const [filteredItem, setFilteredItem] = useState([]);
-  // useEffect(() => {
-
-  //   let temp = cartItem
-  //     ?.filter(
-  //       (item, index, arr) =>
-  //         arr?.findIndex((item1) => item1?.keyI === item?.keyI) === index
-  //     )
-  //     ?.map((item) => ({
-  //       ...item,
-  //       quantity: cartItem?.filter((item1) => item1?.keyI === item?.keyI)
-  //         ?.length,
-  //     }));
-  //   console.log(temp, "abc", cartItem);
-  //   setFilteredItem(temp)
-  // }, [cartItem]);
-
+  const RemoveItem = (item) => {
+    const currentItemIndex = reduxItems?.findIndex(
+      (item1) => item1?.keyI === item?.keyI
+    );
+    reduxItems.splice(currentItemIndex, 1);
+    dispatch(itemAction(reduxItems));
+  };
   return (
     <div className={styles.cartMain}>
       <div className={styles.cartCover} onClick={() => propSetShowCart()}>
@@ -54,21 +52,30 @@ const Cart = ({ propSetShowCart }) => {
         </div>
 
         <div className={styles.cartCenter}>
-          {cartItem &&
+          {cartItem?.length ? (
             cartItem?.map((item, index) => {
               return (
                 <div className={styles.cartReturn} key={index}>
                   <div className={styles.cartReturnBtn}>
-                    <DecreamentBtn />
+                    <span
+                      onClick={() => DecreamentFunc(reduxItems, item, dispatch)}
+                    >
+                      <DecreamentBtn />
+                    </span>
+
                     {item?.quantity}
-                    <IncreamentBtn />
+                    <span
+                      onClick={() => IncreamentFunc(reduxItems, item, dispatch)}
+                    >
+                      <IncreamentBtn />
+                    </span>
                   </div>
                   <div className={styles.cartReturnImg}>
                     <Image
                       src={item?.value?.image}
                       height="80px"
                       width="80px"
-                      alt={item?.value?.heading}
+                      alt={"item?.value?.heading"}
                     />
                   </div>
                   <div className={styles.cartReturnMain}>
@@ -80,49 +87,42 @@ const Cart = ({ propSetShowCart }) => {
                       ${item?.value?.newPrice * item?.quantity}
                     </p>
                   </div>
-                  <div className={styles.cartReturnCross}>X</div>
+                  <div
+                    className={styles.cartReturnCross}
+                    onClick={() => RemoveItem(item)}
+                  >
+                    X
+                  </div>
                 </div>
               );
-            })}
-          {/* {tempCartData?.map((item, index) => {
-            return (
-              <div className={styles.cartReturn} key={index}>
-                <div className={styles.cartReturnBtn}>
-                  <DecreamentBtn />
-                  {item?.quantity}
-                  <IncreamentBtn />
-                </div>
-                <div className={styles.cartReturnImg}>
-                  <Image
-                    src={item.image}
-                    height="80px"
-                    width="80px"
-                    alt={item?.heading}
-                  />
-                </div>
-                <div className={styles.cartReturnMain}>
-                  <h3 className={styles.heading}>{item?.heading}</h3>
-                  <p className={styles.quantityGroupSmall}>
-                    ${item?.price}X{item?.quantity}
-                  </p>
-                  <p className={styles.price}>${item?.price}</p>
-                </div>
-                <div className={styles.cartReturnCross}>X</div>
-              </div>
-            );
-          })} */}
+            })
+          ) : (
+            <div className={styles.shopingCartText}>
+              <Image src={shopingBag} alt="shoping card bag" />
+              <h3>Your shopping bag is empty.</h3>
+              <h3> Start shopping</h3>
+            </div>
+          )}
         </div>
 
-        <div className={styles.cartBottom}>
-          <CustomButton text="Check out Now" link={"/"} width="250px" />
-          <CustomButton
-            text="View Cart"
-            link={"/"}
-            width="250px"
-            background="transparent"
-            color="#d23f57"
-          />
-        </div>
+        {cartItem?.length ? (
+          <div className={styles.cartBottom}>
+            <CustomButton
+              text={`Checkout Now ${
+                totalPrice > 0 ? `(${totalPrice}.00)` : ""
+              }`}
+              link={"/"}
+              width="250px"
+            />
+            <CustomButton
+              text="View Cart"
+              link={"/"}
+              width="250px"
+              background="transparent"
+              color="#d23f57"
+            />
+          </div>
+        ) : null}
       </div>
     </div>
   );

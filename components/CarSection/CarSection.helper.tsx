@@ -16,7 +16,7 @@ export const CarSectionData = [
     quantity: 0,
     keyI: 931,
     value: {
-      image: img1.src,
+      image: img1?.src,
       paragraph: "Smart Watch Black",
       newPrice: "250.00",
       strikePrice: "50.00",
@@ -28,7 +28,7 @@ export const CarSectionData = [
     quantity: 0,
     keyI: 932,
     value: {
-      image: img2.src,
+      image: img2?.src,
       paragraph: "Smart Watch Blue",
       newPrice: "250.00",
       strikePrice: "50.00",
@@ -40,7 +40,7 @@ export const CarSectionData = [
     quantity: 0,
     keyI: 933,
     value: {
-      image: img3.src,
+      image: img3?.src,
       paragraph: "Smart Watch Green",
       newPrice: "250.00",
       strikePrice: "50.00",
@@ -52,7 +52,7 @@ export const CarSectionData = [
     quantity: 0,
     keyI: 934,
     value: {
-      image: img4.src,
+      image: img4?.src,
       paragraph: "Smart Watch Red",
       newPrice: "250.00",
       strikePrice: "50.00",
@@ -64,7 +64,7 @@ export const CarSectionData = [
     quantity: 0,
     keyI: 935,
     value: {
-      image: img5.src,
+      image: img5?.src,
       paragraph: "Smart Watch Black",
       newPrice: "187.50",
       strikePrice: "50.00",
@@ -76,7 +76,7 @@ export const CarSectionData = [
     quantity: 0,
     keyI: 936,
     value: {
-      image: img6.src,
+      image: img6?.src,
       paragraph: "Smart Watch Blue",
       newPrice: "187.50",
       strikePrice: "50.00",

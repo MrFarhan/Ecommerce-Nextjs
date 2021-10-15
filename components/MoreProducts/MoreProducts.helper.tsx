@@ -16,7 +16,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 841,
     value: {
-      image: img1,
+      image: img1?.src,
       paragraph: "Smart Watch Black",
       oldPrice: "$187.50",
       newPrice: "250.00",
@@ -28,7 +28,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 842,
     value: {
-      image: img2,
+      image: img2?.src,
       paragraph: "Smart Watch Blue",
       oldPrice: "$187.50",
       newPrice: "250.00",
@@ -40,7 +40,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 843,
     value: {
-      image: img3,
+      image: img3?.src,
       paragraph: "Smart Watch Green",
       oldPrice: "$187.50",
       newPrice: "250.00",
@@ -52,7 +52,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 844,
     value: {
-      image: img4,
+      image: img4?.src,
       paragraph: "Smart Watch Red",
       oldPrice: "$187.50",
       newPrice: "250.00",
@@ -64,7 +64,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 845,
     value: {
-      image: img5,
+      image: img5?.src,
       paragraph: "Smart Watch Red",
       oldPrice: "$187.50",
       newPrice: "250.00",
@@ -76,7 +76,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 846,
     value: {
-      image: img6,
+      image: img6?.src,
       paragraph: "Smart Watch Red",
       oldPrice: "$187.50",
       newPrice: "250.00",
@@ -88,7 +88,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 847,
     value: {
-      image: img7,
+      image: img7?.src,
       paragraph: "Smart Watch Red",
       oldPrice: "$187.50",
       newPrice: "250.00",
@@ -100,7 +100,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 848,
     value: {
-      image: img8,
+      image: img8?.src,
       paragraph: "Smart Watch Red",
       oldPrice: "$187.50",
       newPrice: "250.00",
@@ -112,7 +112,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 849,
     value: {
-      image: img9,
+      image: img9?.src,
       paragraph: "Smart Watch Red",
       oldPrice: "$187.50",
       newPrice: "250.00",
@@ -124,7 +124,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 850,
     value: {
-      image: img10,
+      image: img10?.src,
       paragraph: "Smart Watch Red",
       oldPrice: "$187.50",
       newPrice: "250.00",
@@ -136,7 +136,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 851,
     value: {
-      image: img11,
+      image: img11?.src,
       paragraph: "Smart Watch Red",
       oldPrice: "$187.50",
       newPrice: "250.00",
@@ -148,7 +148,7 @@ export const MoreProductsData = [
     quantity: 0,
     keyI: 852,
     value: {
-      image: img12,
+      image: img12?.src,
       paragraph: "Smart Watch Red",
       oldPrice: "$187.50",
       newPrice: "250.00",

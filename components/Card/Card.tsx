@@ -12,6 +12,8 @@ import IncreamentBtn from "../ButtonGroup/IncreamentBtn";
 import DecreamentBtn from "../ButtonGroup/DecrementBtn";
 import Modal from "../Modal/Modal";
 import ProductDetailsPopup from "../ProductDetailsPopup/ProductDetailsPopup";
+import { IncreamentFunc } from "../../hooks/IncreamentCartItem";
+import { DecreamentFunc } from "../../hooks/DecreamentCartItem";
 
 type Props = {
   badges?: boolean;
@@ -36,45 +38,45 @@ const Card: FC<Props> = (props) => {
   const state = useSelector<initialStateType, initialStateType>(
     (state) => state
   );
+  const reduxItems = [...state?.item];
 
   const [showDetails, setShowDetails] = useState(false);
 
-  console.log("counter", counter);
   const dispatch = useDispatch();
 
-  const IncreamentFunc = () => {
-    const reduxItems = [...state?.item];
-    const currentItemIndex = reduxItems?.findIndex(
-      (item1) => item1?.keyI === props?.completeItem?.keyI
-    );
+  // const IncreamentFunc = () => {
+  //   const reduxItems = [...state?.item];
+  //   const currentItemIndex = reduxItems?.findIndex(
+  //     (item1) => item1?.keyI === props?.completeItem?.keyI
+  //   );
 
-    if (currentItemIndex !== -1) {
-      reduxItems[currentItemIndex].quantity = ++reduxItems[currentItemIndex]
-        .quantity;
-    } else {
-      reduxItems.push({ ...props.completeItem, quantity: 1 });
-    }
-    dispatch(itemAction(reduxItems));
-  };
+  //   if (currentItemIndex !== -1) {
+  //     reduxItems[currentItemIndex].quantity = ++reduxItems[currentItemIndex]
+  //       .quantity;
+  //   } else {
+  //     reduxItems.push({ ...props.completeItem, quantity: 1 });
+  //   }
+  //   dispatch(itemAction(reduxItems));
+  // };
 
-  const DecreamentFunc = () => {
-    const reduxItems = [...state?.item];
-    const currentItemIndex = reduxItems?.findIndex(
-      (item1) => item1?.keyI === props?.completeItem?.keyI
-    );
-    if (currentItemIndex !== -1) {
-      console.log("redux length", reduxItems[currentItemIndex].quantity);
-      if (reduxItems[currentItemIndex].quantity === 1) {
-        reduxItems.splice(currentItemIndex, 1);
-      } else {
-        reduxItems[currentItemIndex].quantity = --reduxItems[currentItemIndex]
-          .quantity;
-      }
-    } else {
-      reduxItems.splice(currentItemIndex, 1);
-    }
-    dispatch(itemAction(reduxItems));
-  };
+  // const DecreamentFunc = () => {
+  //   const reduxItems = [...state?.item];
+  //   const currentItemIndex = reduxItems?.findIndex(
+  //     (item1) => item1?.keyI === props?.completeItem?.keyI
+  //   );
+  //   if (currentItemIndex !== -1) {
+  //     console.log("redux length", reduxItems[currentItemIndex].quantity);
+  //     if (reduxItems[currentItemIndex].quantity === 1) {
+  //       reduxItems.splice(currentItemIndex, 1);
+  //     } else {
+  //       reduxItems[currentItemIndex].quantity = --reduxItems[currentItemIndex]
+  //         .quantity;
+  //     }
+  //   } else {
+  //     reduxItems.splice(currentItemIndex, 1);
+  //   }
+  //   dispatch(itemAction(reduxItems));
+  // };
 
   useEffect(() => {
     setCounter(
@@ -84,7 +86,7 @@ const Card: FC<Props> = (props) => {
         } else return prev;
       }, 0)
     );
-  }, [state?.item, IncreamentFunc, DecreamentFunc]);
+  }, [state?.item]);
   return (
     <div className={styles.cardMain}>
       {badges && (
@@ -131,13 +133,21 @@ const Card: FC<Props> = (props) => {
           <span className={styles.AddSubButtonGroup}>
             {counter > 0 && (
               <span className={styles.decrementGroup}>
-                <span onClick={() => DecreamentFunc()}>
+                <span
+                  onClick={() =>
+                    DecreamentFunc(reduxItems, props?.completeItem, dispatch)
+                  }
+                >
                   <DecreamentBtn />
                 </span>
                 {counter}
               </span>
             )}
-            <span onClick={() => IncreamentFunc()}>
+            <span
+              onClick={() =>
+                IncreamentFunc(reduxItems, props?.completeItem, dispatch)
+              }
+            >
               <IncreamentBtn />
             </span>
           </span>
