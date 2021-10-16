@@ -16,6 +16,12 @@ import Categories from "../components/Categories/Categories";
 import AboutBanner from "../components/AboutBanner/AboutBanner";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
+import { CgBolt, CgGift } from "react-icons/cg";
+import { BigDiscountsData } from "../components/BigDiscounts/BigDiscounts.helper";
+import { CategoriesData } from "../components/Categories/Categories.helper";
+import { HomeCardData } from "../components/Card/HomeCard.helper";
+
+import { BsGridFill } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -23,7 +29,10 @@ export default function Home() {
       <Layout>
         <Head>
           <title>E-Commerce | Home</title>
-          <meta name="description" content="One stop Ecommerce Solution for your all needs" />
+          <meta
+            name="description"
+            content="One stop Ecommerce Solution for your all needs"
+          />
           <link rel="icon" href="/logo.svg/" />
           <link
             rel="preconnect"
@@ -34,18 +43,38 @@ export default function Home() {
         <main className={styles.main}>
           <HomeCarousel />
           <br />
-          <HomeCard />
+          <HomeCard
+            data={{
+              heading: "Flash Sale",
+              icon:<CgBolt color="rgb(210, 63, 87)" />,
+              HomeCardData,
+              frequentlyBought: true,
+            }}
+          />
           <br />
-
           <TopCategories />
           <TopRatingFeatured />
           <NewArrivals />
-          <BigDiscounts />
+          <BigDiscounts
+            data={{
+              heading: "Big Discount",
+              icon: <CgGift className="lightRedColor" />,
+              dataObj: BigDiscountsData,
+              viewAll: true,
+            }}
+          />
           <CarSection />
           <MobileSection />
           <TwoColumnBannerImageSection />
           <Optics />
-          <Categories />
+          <Categories
+            data={{
+              heading: "Categories",
+              icon: <BsGridFill color="rgb(210, 63, 87)" />,
+              CategoriesData,
+              viewAllBtn: true,
+            }}
+          />
           <MoreProducts />
           <AboutBanner />
         </main>

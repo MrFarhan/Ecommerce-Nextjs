@@ -1,22 +1,20 @@
 import Card from "./Card";
-import { HomeCardData } from "./HomeCard.helper";
 import styles from "./HomeCard.module.scss";
-import { CgBolt } from "react-icons/cg";
 import { AiOutlineCaretRight } from "react-icons/ai";
 
-const HomeCard = () => {
+const HomeCard = ({ data }) => {
   return (
     <div className={styles.homeCardMain}>
       <div className={styles.homeCardMainHeading}>
         <h2>
-          <CgBolt color="rgb(210, 63, 87)" /> &nbsp; Flash Sale
+          {data?.icon} &nbsp; {data?.heading}
         </h2>
         <p className="viewAllClass">
           View all <AiOutlineCaretRight />
         </p>
       </div>
       <div className={styles.homeCard}>
-        {Object.values(HomeCardData)?.map((item, index) => {
+        {data?.HomeCardData?.map((item, index) => {
           return (
             <span key={index}>
               <Card

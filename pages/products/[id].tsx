@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Layout from "../../components/Layout/Layout";
 import dataMaping from "../../lib/dataMaping";
 import ProductDetailsPopup from "../../components/ProductDetailsPopup/ProductDetailsPopup";
+import DescriptionReviewSection from "../../components/DescriptionReviewSection/DescriptionReviewSection";
 
 const ProductDetails = () => {
   const router = useRouter();
@@ -17,7 +18,10 @@ const ProductDetails = () => {
   });
   return (
     <Layout>
+      <div style={{display: 'flex',alignItems: 'center',justifyContent: 'center',width: '100%',flexDirection:"column"}}>
       <ProductDetailsPopup data={productData[0]?.value} />
+      <DescriptionReviewSection/>
+      </div>
     </Layout>
   );
 };

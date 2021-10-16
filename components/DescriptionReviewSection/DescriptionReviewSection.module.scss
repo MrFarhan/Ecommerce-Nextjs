@@ -1,0 +1,71 @@
+.descriptionReviewContainer {
+  display: flex;
+  padding: 1em;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+
+  p {
+    margin-right: 20px;
+  }
+  hr {
+    width: 100%;
+    margin-top: -1em;
+  }
+  span {
+    display: flex;
+  }
+  .descriptionReviewHeading {
+    width: 100%;
+    max-width: 1200px;
+    span {
+      .descriptionHeadingP {
+        cursor: default;
+        color: red;
+        border-bottom: 2px solid red;
+        padding-bottom: 1em;
+        padding-right: 1em;
+        padding-left: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      p{cursor: pointer;}
+    }
+  }
+  .descriptionReview {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .reviewsGroupContainer {
+    width: 100%;
+    .reviewGropReturn {
+      .reviewImgGroup {
+        display: flex;
+        align-items: center;
+        .reviewerName {
+          margin-bottom: 0;
+          margin-left: 5px;
+        }
+      }
+      .starRating {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        margin-left: 5px;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .lastCardSec{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

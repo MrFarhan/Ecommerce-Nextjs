@@ -21,19 +21,24 @@ const ProductDetailsPopup = ({ data }) => {
   React.useEffect(() => {
     setCounter(
       state?.item?.reduce((prev, curr) => {
-        if ((curr?.keyI == data?.completeItem?.keyI)|| (curr?.keyI == data?.keyI)) {
+        if (
+          curr?.keyI == data?.completeItem?.keyI ||
+          curr?.keyI == data?.keyI
+        ) {
           return (prev += curr.quantity || 0);
         } else return prev;
       }, 0)
     );
   }, [state?.item]);
+
+  const [viewImg, setViewImg] = useState(data?.image);
   return (
     <div className={styles.ProductDetailsContainer} key={data?.image}>
       <div className={styles.ProductDetailsContentContainer}>
         {data?.image && (
           <div className={styles.ProductImageContainer}>
             <Image
-              src={data?.image}
+              src={viewImg || data?.image}
               width="200px"
               height="200px"
               alt="product details"
@@ -88,7 +93,11 @@ const ProductDetailsPopup = ({ data }) => {
       <div className={styles.ProductImagePreviewContainer}>
         {data?.itemImageArray?.map((img, ind) => {
           return (
-            <div className={styles.ProductImagePreview} key={ind}>
+            <div
+              className={viewImg === img ? styles.ProductImagePreviewActive : styles.ProductImagePreview}
+              key={ind}
+              onClick={() => setViewImg(img)}
+            >
               <Image
                 src={img}
                 width="50px"

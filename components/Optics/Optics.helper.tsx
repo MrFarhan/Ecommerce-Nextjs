@@ -28,7 +28,7 @@ export const opticsData = [
       brand: "Xiaomi",
       soldBy: "The Info Tech ",
       isStockAvailable: true,
-      itemImageArray: [img6.src, img6.src],
+      itemImageArray: [img1.src, img2.src],
     },
   },
   {
@@ -45,7 +45,7 @@ export const opticsData = [
     brand: "Xiaomi",
     soldBy: "The Info Tech ",
     isStockAvailable: true,
-    itemImageArray: [img6.src, img6.src],
+    itemImageArray: [img3.src, img4.src],
   }},
   {
     quantity: 0,
@@ -61,7 +61,7 @@ export const opticsData = [
     brand: "Xiaomi",
     soldBy: "The Info Tech ",
     isStockAvailable: true,
-    itemImageArray: [img6.src, img6.src],
+    itemImageArray: [img5.src, img6.src],
   }},
   {
     quantity: 0,
@@ -77,7 +77,7 @@ export const opticsData = [
     brand: "Xiaomi",
     soldBy: "The Info Tech ",
     isStockAvailable: true,
-    itemImageArray: [img6.src, img6.src],
+    itemImageArray: [img7.src, img8.src],
   }},
   {
     quantity: 0,
@@ -93,7 +93,7 @@ export const opticsData = [
     brand: "Xiaomi",
     soldBy: "The Info Tech ",
     isStockAvailable: true,
-    itemImageArray: [img6.src, img6.src],
+    itemImageArray: [img9.src, img1.src],
   }},
   {
     quantity: 0,
@@ -109,7 +109,7 @@ export const opticsData = [
     brand: "Xiaomi",
     soldBy: "The Info Tech ",
     isStockAvailable: true,
-    itemImageArray: [img6.src, img6.src],
+    itemImageArray: [img2.src, img3.src],
   }},
   {
     quantity: 0,
@@ -125,7 +125,7 @@ export const opticsData = [
     brand: "Xiaomi",
     soldBy: "The Info Tech ",
     isStockAvailable: true,
-    itemImageArray: [img6.src, img6.src],
+    itemImageArray: [img4.src, img5.src],
   }},
   {
     quantity: 0,
@@ -141,7 +141,7 @@ export const opticsData = [
     brand: "Xiaomi",
     soldBy: "The Info Tech ",
     isStockAvailable: true,
-    itemImageArray: [img6.src, img6.src],
+    itemImageArray: [img6.src, img7.src],
   }},
   {
     quantity: 0,
@@ -157,7 +157,7 @@ export const opticsData = [
     brand: "Xiaomi",
     soldBy: "The Info Tech ",
     isStockAvailable: true,
-    itemImageArray: [img6.src, img6.src],
+    itemImageArray: [img8.src, img9.src],
   }},
 ];
 
