@@ -1,10 +1,13 @@
-import Reducer, { initialState } from "./reducers";
-
-export const store = createStore(Reducer, initialState);
+import Reducer from "./reducers";
 
 import { createStore } from "redux";
-import { createWrapper } from "next-redux-wrapper";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
-const makeStore = () => createStore(Reducer) as any;
-
-export const wrapper = createWrapper(makeStore);
+const persistConfig = {
+  key: "root",
+  storage,
+};
+const persistedReducer = persistReducer(persistConfig, Reducer);
+export let store = createStore(persistedReducer) as any;
+export let persistor = persistStore(store);

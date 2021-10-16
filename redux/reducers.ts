@@ -14,14 +14,6 @@ export default function Reducer(
 ) {
   switch (type) {
     case ITEM:
-      let temp = [];
-      const existingState = [...state?.item];
-      // existingState?.map((itemm, index) => {
-      //   console.log("boll", itemm);
-      //   // if (itemm?.keyI !== payload?.keyI) {
-      //   //   return temp.push(itemm);
-      //   // }
-      // });
       return {
         ...state,
         item: payload,
