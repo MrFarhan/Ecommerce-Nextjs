@@ -17,12 +17,11 @@ const ProductDetailsPopup = ({ data }) => {
     (state) => state
   );
   const reduxItems = [...state?.item];
-  console.log("data is ", data);
 
   React.useEffect(() => {
     setCounter(
       state?.item?.reduce((prev, curr) => {
-        if (curr?.keyI == data?.completeItem?.keyI) {
+        if ((curr?.keyI == data?.completeItem?.keyI)|| (curr?.keyI == data?.keyI)) {
           return (prev += curr.quantity || 0);
         } else return prev;
       }, 0)

@@ -43,41 +43,6 @@ const Card: FC<Props> = (props) => {
   const [showDetails, setShowDetails] = useState(false);
 
   const dispatch = useDispatch();
-
-  // const IncreamentFunc = () => {
-  //   const reduxItems = [...state?.item];
-  //   const currentItemIndex = reduxItems?.findIndex(
-  //     (item1) => item1?.keyI === props?.completeItem?.keyI
-  //   );
-
-  //   if (currentItemIndex !== -1) {
-  //     reduxItems[currentItemIndex].quantity = ++reduxItems[currentItemIndex]
-  //       .quantity;
-  //   } else {
-  //     reduxItems.push({ ...props.completeItem, quantity: 1 });
-  //   }
-  //   dispatch(itemAction(reduxItems));
-  // };
-
-  // const DecreamentFunc = () => {
-  //   const reduxItems = [...state?.item];
-  //   const currentItemIndex = reduxItems?.findIndex(
-  //     (item1) => item1?.keyI === props?.completeItem?.keyI
-  //   );
-  //   if (currentItemIndex !== -1) {
-  //     console.log("redux length", reduxItems[currentItemIndex].quantity);
-  //     if (reduxItems[currentItemIndex].quantity === 1) {
-  //       reduxItems.splice(currentItemIndex, 1);
-  //     } else {
-  //       reduxItems[currentItemIndex].quantity = --reduxItems[currentItemIndex]
-  //         .quantity;
-  //     }
-  //   } else {
-  //     reduxItems.splice(currentItemIndex, 1);
-  //   }
-  //   dispatch(itemAction(reduxItems));
-  // };
-
   useEffect(() => {
     setCounter(
       state?.item?.reduce((prev, curr) => {

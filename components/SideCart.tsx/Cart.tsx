@@ -21,13 +21,10 @@ const Cart = ({ propSetShowCart }) => {
 
   const totalAmount = () => {
     cartItem?.map((item, index) => {
-      console.log("hel", Number(item?.value?.newPrice));
       totalPrice += Number(item?.value?.newPrice * item?.quantity);
     });
   };
   totalAmount();
-  console.log("total Price", totalPrice);
-  console.log("cartItem", cartItem);
 
   const RemoveItem = (item) => {
     const currentItemIndex = reduxItems?.findIndex(

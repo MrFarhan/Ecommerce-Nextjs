@@ -5,7 +5,6 @@ export const DecreamentFunc = (reduxItems,currentItem,dispatch) => {
       (item1) => item1?.keyI === currentItem?.keyI
     );
     if (currentItemIndex !== -1) {
-      console.log("redux length", reduxItems[currentItemIndex].quantity);
       if (reduxItems[currentItemIndex].quantity === 1) {
         reduxItems.splice(currentItemIndex, 1);
       } else {
